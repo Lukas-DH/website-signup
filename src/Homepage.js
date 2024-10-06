@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import LeadForm from './LeadForm';
+import LeadForm from './components/LeadForm';
 import './styles.css';
 
 function HomePage() {

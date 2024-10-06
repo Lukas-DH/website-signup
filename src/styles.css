@@ -87,13 +87,30 @@ body {
     border-color: #7129A6;
   }
 
+
+
   .product-selection {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Auto-fit with min size */
-    gap: 10px; /* Space between buttons */
-    justify-items: center; /* Center the items */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    gap: 40px; /* Space between items */
     margin-top: 15px;
   }
+  
+  .product-item {
+    flex: 1 1 150px; /* Grow to fit, but with a minimum width of 150px */
+    max-width: 150px; /* Ensure no item exceeds 150px in width */
+    height: 150px; /* Keep the height fixed for uniformity */
+    box-sizing: border-box;
+  }
+  
+  /* .product-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 10px; 
+    justify-items: center; 
+    margin-top: 15px;
+  } */
   
   .product-item {
     display: flex;
