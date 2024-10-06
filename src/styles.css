@@ -226,6 +226,77 @@ body {
   text-align: left;
 } 
 
+/* Style for the info icon */
+.info-icon {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 14px; /* Adjust size as needed */
+  position: relative;
+}
+
+/* Tooltip container */
+.tooltip {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: 150px; /* Adjust width as needed */
+  font-size: 12px; /* Adjust font size as needed */
+}
+
+/* Tooltip arrow */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* Show the tooltip when hovering the icon */
+.info-icon:hover + .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.product-item {
+  position: relative;
+}
+
+.product-item .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the button */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.product-item:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
   /* Keyframes for the glowing effect */
 /* @keyframes glowing {
   0% {

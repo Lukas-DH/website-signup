@@ -4,44 +4,47 @@ import '../styles.css';
 
 function ModuloContattiItalia() {
   const [formData, setFormData] = useState({
-    nome: '',
-    azienda: '',
+    name: '',
+    company: '',
     email: '',
-    telefono: '',
-    interesseProdotto: []
+    telephone: '',
+    productInterest: []
   });
 
-  const [formInviato, setFormInviato] = useState(false); // Nuovo stato per gestire l'invio del modulo
+  const [formInviato, setFormInviato] = useState(false);
+  const [language, setLanguage] = useState('it'); // State for managing language
 
-  const toggleInteresseProdotto = (prodotto) => {
+  // Toggle between English and Italian
+  const toggleLanguage = () => {
+    setLanguage((prevLanguage) => (prevLanguage === 'it' ? 'en' : 'it'));
+  };
+
+  const toggleproductInterest = (prodotto) => {
     setFormData((prevState) => {
-      // Verifica se il primo prodotto è selezionato
-      if (prodotto === 'Tutti i prodotti') {
-        const tuttiSelezionati = prevState.interesseProdotto.length === 6; // Supponiamo ci siano 6 prodotti
+      if (prodotto === 'All Products') {
+        const tuttiSelezionati = prevState.productInterest.length === 6;
         if (tuttiSelezionati) {
           return {
             ...prevState,
-            interesseProdotto: [] // Deseleziona tutti
+            productInterest: []
           };
         } else {
           return {
             ...prevState,
-            interesseProdotto: ['Tutti i prodotti', 'Digital Cameras', 'identitovigilanza', 'Genea Caring Cryokit', 'S-Cryolock', 'Cryolock'] // Seleziona tutti
+            productInterest: ['All Products', 'Digital Cameras', 'identitovigilanza', 'Genea Caring Cryokit', 'S-Cryolock', 'Cryolock']
           };
         }
       }
-
-      // Logica di toggle normale per gli elementi individuali
-      const èSelezionato = prevState.interesseProdotto.includes(prodotto);
+      const èSelezionato = prevState.productInterest.includes(prodotto);
       if (èSelezionato) {
         return {
           ...prevState,
-          interesseProdotto: prevState.interesseProdotto.filter((item) => item !== prodotto),
+          productInterest: prevState.productInterest.filter((item) => item !== prodotto),
         };
       } else {
         return {
           ...prevState,
-          interesseProdotto: [...prevState.interesseProdotto, prodotto],
+          productInterest: [...prevState.productInterest, prodotto],
         };
       }
     });
@@ -51,25 +54,25 @@ function ModuloContattiItalia() {
     e.preventDefault();
 
     const emailData = {
-      nome: formData.nome,
-      azienda: formData.azienda,
+      name: formData.name,
+      company: formData.company,
       email: formData.email,
-      telefono: formData.telefono,
-      interesseProdotto: formData.interesseProdotto.join(', '), // Converte l'array in una stringa
+      telephone: formData.telephone,
+      productInterest: formData.productInterest.join(', '),
     };
 
     emailjs.send(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID,   // Accesso all'ID del servizio dall'ambiente
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,  // Accesso all'ID del template dall'ambiente
-      emailData,                                  // Dati del modulo
-      process.env.REACT_APP_EMAILJS_PUBLIC_KEY    // Accesso alla chiave pubblica dall'ambiente
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      emailData,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
     ).then(
       (response) => {
         console.log('SUCCESSO!', response.status, response.text);
-        setFormInviato(true); // Imposta lo stato dell'invio del modulo a true
+        setFormInviato(true);
         setTimeout(() => {
-          window.location.href = 'https://sea-turtle-app-qfyrw.ondigitalocean.app/'; // Reindirizza dopo 10 secondi
-        }, 10000); // 10000ms = 10 secondi
+          window.location.href = 'https://sea-turtle-app-qfyrw.ondigitalocean.app/';
+        }, 10000);
       },
       (error) => {
         console.error('FALLITO...', error);
@@ -78,42 +81,88 @@ function ModuloContattiItalia() {
     );
   };
 
-  // Mostra messaggio di ringraziamento dopo l'invio del modulo
+  const texts = {
+    it: {
+      title: "Iscriviti per informazioni sui prodotti",
+      nameLabel: "Nome completo:",
+      companyLabel: "Centro, Clinica, Ospedale:",
+      emailLabel: "Email:",
+      telephoneLabel: "Telefono (Facoltativo):",
+      inviaButton: "Invia",
+      consentText: "Cliccando su \"Invia\", accetto la raccolta e il trattamento dei miei dati personali in conformità con la Privacy Policy di Caring IVF. Acconsento inoltre a ricevere comunicazioni di marketing da Caring IVF.",
+      thankYouMessage: "Grazie! La tua richiesta è stata ricevuta. Verrai reindirizzato a breve.",
+      allProducts: "Tutti i prodotti",
+      product1: "Fotocamere digitali",
+      hover1: "Fotocamere Wifi compatibili con montaggio C e microscopio a inversione",
+      product2: "Genea Caring Cryokit",
+      hover2: "Ottimizza il prezzo con un pacchetto Gems+Cryolock",
+      product3: "S-Cryolock",
+      hover3: "Dimensioni ridotte",
+      product4: "Cryolock",
+      hover4: "Dimensioni regolari"
+    }
+,
+    en: {
+      title: "Subscribe for product information",
+      nameLabel: "Full Name:",
+      companyLabel: "Center, Clinic, Hospital:",
+      emailLabel: "Email:",
+      telephoneLabel: "telephone (Optional):",
+      inviaButton: "Send",
+      consentText: "By clicking \"Send\", I agree to the collection and processing of my personal data in accordance with Caring IVF's Privacy Policy. I also consent to receiving marketing communications from Caring IVF.",
+      thankYouMessage: "Thank you! Your request has been received. You will be redirected shortly.",
+      allProducts:"All Products",
+      product1:"Digital Cameras",
+      hover1:"Wifi cameras C-mount and invertion microscope compatible",
+      product2:"Genea Caring Cryokit",
+      hover2:"Optimise pricing with a Gems+Cryolock bundle",
+      product3:"S-Cryolock",
+      hover3:"Slimmer size",
+      product4:"Cryolock",
+      hover4:"Regular size"
+    }
+  };
+
+  const currentText = texts[language];
+
   if (formInviato) {
     return (
       <div className="thank-you-message">
-        <h1>Grazie!</h1>
-        <p>La tua richiesta è stata ricevuta. Verrai reindirizzato a breve.</p>
+        <h1>{currentText.thankYouMessage}</h1>
       </div>
     );
   }
 
   return (
     <div className="lead-form-container">
-      <h2>Iscriviti per ottenere informazioni sui prodotti</h2>
+      <button onClick={toggleLanguage}>
+        {language === 'it' ? 'Switch to English' : 'Passa a Italiano'}
+      </button>
+
+      <h2>{currentText.title}</h2>
       <form onSubmit={inviaEmail}>
         <div className="form-group">
-          <label htmlFor="nome">Nome completo:<span style={{ color: 'red' }}>*</span></label>
+          <label htmlFor="name">{currentText.nameLabel}<span style={{ color: 'red' }}>*</span></label>
           <input
             type="text"
-            name="nome"
-            value={formData.nome}
-            onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
+            name="name"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="azienda">Centro, clinica, ospedale:<span style={{ color: 'red' }}>*</span></label>
+          <label htmlFor="company">{currentText.companyLabel}<span style={{ color: 'red' }}>*</span></label>
           <input
             type="text"
-            name="azienda"
-            value={formData.azienda}
-            onChange={(e) => setFormData({ ...formData, azienda: e.target.value })}
+            name="company"
+            value={formData.company}
+            onChange={(e) => setFormData({ ...formData, company: e.target.value })}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email:<span style={{ color: 'red' }}>*</span></label>
+          <label htmlFor="email">{currentText.emailLabel}<span style={{ color: 'red' }}>*</span></label>
           <input
             type="email"
             name="email"
@@ -123,72 +172,75 @@ function ModuloContattiItalia() {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="telefono">Telefono (Opzionale):</label>
+          <label htmlFor="telephone">{currentText.telephoneLabel}</label>
           <input
             type="tel"
-            name="telefono"
-            value={formData.telefono}
-            onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
+            name="telephone"
+            value={formData.telephone}
+            onChange={(e) => setFormData({ ...formData, telephone: e.target.value })}
           />
         </div>
 
-        {/* Sezione di Interesse per i Prodotti */}
         <div className="form-group">
           <label>Interesse Prodotti:</label>
           <div className="product-selection">
 
             <button
               type="button"
-              className={`product-item ${formData.interesseProdotto.includes('Tutti i prodotti') ? 'selected' : ''}`}
-              onClick={() => toggleInteresseProdotto('Tutti i prodotti')}
+              className={`product-item ${formData.productInterest.includes('All Products') ? 'selected' : ''}`}
+              onClick={() => toggleproductInterest('All Products')}
             >
-              <img src="/caring-logo.png" alt="Logo Tutti i Prodotti" className="product-logo" />
-              <span>Tutti i prodotti</span>
-              <p>This paragraph is below the span.</p>
+              <img src="/caring-logo.png" alt="Logo All Products" className="product-logo" />
+              <span>{currentText.allProducts}</span>
+              <div className="tooltip-text">Click to select all products</div>
             </button>
 
             <button
               type="button"
-              className={`product-item ${formData.interesseProdotto.includes('Digital Cameras') ? 'selected' : ''}`}
-              onClick={() => toggleInteresseProdotto('Digital Cameras')}
+              className={`product-item ${formData.productInterest.includes('Digital Cameras') ? 'selected' : ''}`}
+              onClick={() => toggleproductInterest('Digital Cameras')}
             >
               <img src="/geri.jpeg" alt="Geri" className="product-logo" />
-              <span>Digital Cameras</span>
+              <span>{currentText.product1}</span>
+              <div className="tooltip-text">{currentText.hover1}</div>
             </button>
 
 
             <button
               type="button"
-              className={`product-item ${formData.interesseProdotto.includes('Genea Caring Cryokit') ? 'selected' : ''}`}
-              onClick={() => toggleInteresseProdotto('Genea Caring Cryokit')}
+              className={`product-item ${formData.productInterest.includes('Genea Caring Cryokit') ? 'selected' : ''}`}
+              onClick={() => toggleproductInterest('Genea Caring Cryokit')}
             >
               <img src="/gems.jpeg" alt="Gems" className="product-logo" />
-              <span>Genea Caring Cryokit</span>
+              <span>{currentText.product2}</span>
+              <div className="tooltip-text">{currentText.hover2}</div>
             </button>
 
             <button
               type="button"
-              className={`product-item ${formData.interesseProdotto.includes('S-Cryolock') ? 'selected' : ''}`}
-              onClick={() => toggleInteresseProdotto('S-Cryolock')}
+              className={`product-item ${formData.productInterest.includes('S-Cryolock') ? 'selected' : ''}`}
+              onClick={() => toggleproductInterest('S-Cryolock')}
             >
               <img src="/s-cryolock.jpg" alt="s-cryolock" className="product-logo" />
-              <span>S-Cryolock</span>
+              <span>{currentText.product3}</span>
+              <div className="tooltip-text">{currentText.hover3}</div>
             </button>
 
             <button
               type="button"
-              className={`product-item ${formData.interesseProdotto.includes('Cryolock') ? 'selected' : ''}`}
-              onClick={() => toggleInteresseProdotto('Cryolock')}
+              className={`product-item ${formData.productInterest.includes('Cryolock') ? 'selected' : ''}`}
+              onClick={() => toggleproductInterest('Cryolock')}
             >
               <img src="/cryolock.jpeg" alt="cryolock" className="product-logo" />
-              <span>Cryolock</span>
+              <span>{currentText.product4}</span>
+              <div className="tooltip-text">{currentText.hover4}</div>
             </button>
           </div>
         </div>
 
-        <button type="submit" className="submit-button">Invia</button>
+        <button type="submit" className="submit-button">{currentText.inviaButton}</button>
         <p className="consent-text">
-          Cliccando "Invia", accetto la raccolta e il trattamento dei miei dati personali in conformità con la Privacy Policy di Caring IVF. Acconsento inoltre a ricevere comunicazioni di marketing da Caring IVF.
+          {currentText.consentText}
         </p>
       </form>
     </div>
@@ -196,3 +248,16 @@ function ModuloContattiItalia() {
 }
 
 export default ModuloContattiItalia;
+
+
+
+
+
+
+
+
+
+
+
+
+
