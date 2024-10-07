@@ -22,7 +22,7 @@ function ModuloContattiItalia() {
   const toggleproductInterest = (prodotto) => {
     setFormData((prevState) => {
       if (prodotto === 'All Products') {
-        const tuttiSelezionati = prevState.productInterest.length === 6;
+        const tuttiSelezionati = prevState.productInterest.length === 7;
         if (tuttiSelezionati) {
           return {
             ...prevState,
@@ -31,7 +31,7 @@ function ModuloContattiItalia() {
         } else {
           return {
             ...prevState,
-            productInterest: ['All Products', 'Digital Cameras', 'identitovigilanza', 'Genea Caring Cryokit', 'S-Cryolock', 'Cryolock']
+            productInterest: ['All Products','Timelapse', 'Digital Cameras', 'identitovigilanza', 'Caring Cryokit', 'S-Cryolock', 'Cryolock']
           };
         }
       }
@@ -94,12 +94,16 @@ function ModuloContattiItalia() {
       allProducts: "Tous les produits",
       product1: "Appareils photo numériques",
       hover1: "Appareils photo Wifi compatibles avec monture C et microscope à inversion",
-      product2: "Genea Caring Cryokit",
+      product2: "Caring Cryokit",
       hover2: "Optimisez le prix avec un pack Gems+Cryolock",
       product3: "S-Cryolock",
       hover3: "Taille plus fine",
       product4: "Cryolock",
-      hover4: "Taille régulière"
+      hover4: "Taille régulière",
+      witnessing:"Witnessing",
+      witnessingHover:"Gidget witnessing system",
+      Timelapse:"Timelapse",
+      TimelapseHover:"Geri timelaps system"
     }
 
 ,
@@ -115,12 +119,16 @@ function ModuloContattiItalia() {
       allProducts:"All Products",
       product1:"Digital Cameras",
       hover1:"Wifi cameras C-mount and invertion microscope compatible",
-      product2:"Genea Caring Cryokit",
+      product2:"Caring Cryokit",
       hover2:"Optimise pricing with a Gems+Cryolock bundle",
       product3:"S-Cryolock",
       hover3:"Slimmer size",
       product4:"Cryolock",
-      hover4:"Regular size"
+      hover4:"Regular size",
+      witnessing:"Witnessing",
+      witnessingHover:"Gidget witnessing system",
+      Timelapse:"Timelapse",
+      TimelapseHover:"Geri timelaps system"
     }
   };
 
@@ -196,6 +204,39 @@ function ModuloContattiItalia() {
               <div className="tooltip-text">Click to select all products</div>
             </button>
 
+
+
+            <button
+              type="button"
+              className={`product-item ${formData.productInterest.includes('Timelapse') ? 'selected' : ''}`}
+              onClick={() => toggleproductInterest('Timelapse')}
+            >
+              <img src="/timelapse.jpeg" alt="Geri" className="product-logo" />
+              <span>{currentText.Timelapse}</span>
+              <div className="tooltip-text">{currentText.TimelapseHover}</div>
+            </button>
+
+            <button
+              type="button"
+              className={`product-item ${formData.productInterest.includes('Timelapse') ? 'selected' : ''}`}
+              onClick={() => toggleproductInterest('Witnessing')}
+            >
+              <img src="/Witnessing.jpeg" alt="Geri" className="product-logo" />
+              <span>{currentText.witnessing}</span>
+              <div className="tooltip-text">{currentText.witnessing}</div>
+            </button>
+
+            <button
+              type="button"
+              className={`product-item ${formData.productInterest.includes('Timelapse') ? 'selected' : ''}`}
+              onClick={() => toggleproductInterest('Witnessing')}
+            >
+              <img src="/Witnessing.jpeg" alt="Geri" className="product-logo" />
+              <span>{currentText.witnessing}</span>
+              <div className="tooltip-text">{currentText.witnessing}</div>
+            </button>
+
+
             <button
               type="button"
               className={`product-item ${formData.productInterest.includes('Digital Cameras') ? 'selected' : ''}`}
@@ -207,10 +248,12 @@ function ModuloContattiItalia() {
             </button>
 
 
+
+
             <button
               type="button"
-              className={`product-item ${formData.productInterest.includes('Genea Caring Cryokit') ? 'selected' : ''}`}
-              onClick={() => toggleproductInterest('Genea Caring Cryokit')}
+              className={`product-item ${formData.productInterest.includes('Caring Cryokit') ? 'selected' : ''}`}
+              onClick={() => toggleproductInterest('Caring Cryokit')}
             >
               <img src="/gems.jpeg" alt="Gems" className="product-logo" />
               <span>{currentText.product2}</span>
