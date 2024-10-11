@@ -40,7 +40,7 @@ const texts = {
     digitalCameras: "Digital Cameras",
     digitalCamerasHover:
       "Wifi cameras C-mount and invertion microscope compatible",
-    cryokit: "Genea Caring Cryokit",
+    cryokit: "Caring Genea Cryokit",
     cryokitHover: "Optimise pricing with a Gems+Cryolock bundle",
     scryolock: "S-Cryolock",
     scryolockHover: "Slimmer size",
@@ -91,7 +91,7 @@ const texts = {
     digitalCameras: "Fotocamere Digitali",
     digitalCamerasHover:
       "Fotocamere Wifi compatibili con montatura C e microscopi a inversione",
-    cryokit: "Genea Caring Cryokit",
+    cryokit: "Caring Genea Cryokit",
     cryokitHover: "Ottimizza i prezzi con un bundle Gems+Cryolock",
     scryolock: "S-Cryolock",
     scryolockHover: "Dimensioni più ridotte",
@@ -143,7 +143,7 @@ const texts = {
     digitalCameras: "Appareils Photo Numériques",
     digitalCamerasHover:
       "Appareils photo Wifi compatibles avec monture C et microscope inversé",
-    cryokit: "Genea Caring Cryokit",
+    cryokit: "Caring Genea Cryokit",
     cryokitHover: "Optimisez les prix avec un bundle Gems+Cryolock",
     scryolock: "S-Cryolock",
     scryolockHover: "Taille plus fine",
@@ -196,7 +196,7 @@ const texts = {
     digitalCameras: "Cámaras Digitales",
     digitalCamerasHover:
       "Cámaras Wifi compatibles con montura C y microscopios de inversión",
-    cryokit: "Genea Caring Cryokit",
+    cryokit: "Caring Genea Cryokit",
     cryokitHover: "Optimiza precios con un paquete Gems+Cryolock",
     scryolock: "S-Cryolock",
     scryolockHover: "Tamaño más pequeño",
@@ -248,7 +248,7 @@ const texts = {
     digitalCameras: "Câmeras Digitais",
     digitalCamerasHover:
       "Câmeras Wifi compatíveis com montagem C e microscópios de inversão",
-    cryokit: "Genea Caring Cryokit",
+    cryokit: "Caring Genea Cryokit",
     cryokitHover: "Otimize os preços com um pacote Gems+Cryolock",
     scryolock: "S-Cryolock",
     scryolockHover: "Tamanho menor",

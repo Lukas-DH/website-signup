@@ -37,7 +37,7 @@ function ModuloContattiItalia() {
               "All Products",
               "Digital Cameras",
               "identitovigilanza",
-              "Genea Caring Cryokit",
+              "Caring Genea Cryokit",
               "S-Cryolock",
               "Cryolock",
             ],

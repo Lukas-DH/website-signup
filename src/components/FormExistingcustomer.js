@@ -47,7 +47,7 @@ function Existingcustomers() {
               "All Products",
               "Digital Cameras",
               "identitovigilanza",
-              "Genea Caring Cryokit",
+              "Caring Genea Cryokit",
               "S-Cryolock",
               "Cryolock",
             ],

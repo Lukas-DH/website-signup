@@ -66,11 +66,11 @@ const ProductList = ({ currentText, formData, toggleProductInterest }) => {
         <button
           type="button"
           className={`product-item ${
-            formData.productInterest.includes("Genea Caring Cryokit")
+            formData.productInterest.includes("Caring Genea Cryokit")
               ? "selected"
               : ""
           }`}
-          onClick={() => toggleProductInterest("Genea Caring Cryokit")}
+          onClick={() => toggleProductInterest("Caring Genea Cryokit")}
         >
           <img src="/gems.jpeg" alt="Gems" className="product-logo" />
           <span>{currentText.cryokit}</span>
