@@ -133,7 +133,7 @@ function Existingcustomers() {
         <option value="fr">French</option>
       </select>
 
-      <h2>{currentText.title}</h2>
+      <h2>{currentText.titleExisting}</h2>
       <form onSubmit={inviaEmail}>
         <div className="form-group tooltip-container">
           <label htmlFor="companyName">
