@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import LeadForm from './components/LeadFormItaly';
-import './styles.css';
+import { Link } from "react-router-dom";
+import LeadForm from "../components/LeadFormItaly";
+import "../styles.css";
 
 function Italian() {
   return (

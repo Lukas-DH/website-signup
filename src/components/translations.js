@@ -8,7 +8,7 @@ const texts = {
       "The person authorized to make decisions on behalf of the company and sign POs and/or quotations in order to allow us to ship your order.",
     authorisedPersonEmailLabel: "Authorised Person Email:",
     authorisedPersonEmailHover: "Email address of the authorized person.",
-    contactLabel: "Contact:",
+    contactLabel: "General Lab Contact:",
     contactHover: "Contact to recieve deliveries for the lab.",
     emailLabel: "Email:",
     emailHover: "The email address used to recieve deliveries for the lab.",
@@ -45,6 +45,7 @@ const texts = {
     scryolockHover: "Slimmer size",
     cryolock: "Cryolock",
     cryolockHover: "Regular size",
+    switchLanguage: "Switch to english",
   },
   it: {
     companyNameLabel: "Nome della Società:",
@@ -55,7 +56,7 @@ const texts = {
       "La persona autorizzata a prendere decisioni per conto della società e a firmare PO e/o preventivi per consentirci di spedire il tuo ordine.",
     authorisedPersonEmailLabel: "Email della Persona Autorizzata:",
     authorisedPersonEmailHover: "Indirizzo email della persona autorizzata.",
-    contactLabel: "Contatto:",
+    contactLabel: "Contatto generale del labo:",
     contactHover: "Contatto per ricevere le consegne per il laboratorio.",
     emailLabel: "Email:",
     emailHover:
@@ -94,6 +95,7 @@ const texts = {
     scryolockHover: "Dimensioni più ridotte",
     cryolock: "Cryolock",
     cryolockHover: "Dimensioni standard",
+    switchLanguage: "Passa a Italiano",
   },
 
   fr: {
@@ -105,7 +107,7 @@ const texts = {
       "La personne autorisée à prendre des décisions au nom de l'entreprise et à signer des bons de commande et/ou des devis afin de nous permettre d'expédier votre commande.",
     authorisedPersonEmailLabel: "Email de la Personne Autorisée:",
     authorisedPersonEmailHover: "Adresse email de la personne autorisée.",
-    contactLabel: "Contact:",
+    contactLabel: "Contact général du lab:",
     contactHover: "Contact pour recevoir les livraisons pour le laboratoire.",
     emailLabel: "Email:",
     emailHover:
@@ -144,6 +146,7 @@ const texts = {
     scryolockHover: "Taille plus fine",
     cryolock: "Cryolock",
     cryolockHover: "Taille standard",
+    switchLanguage: "Passer en Français",
   },
 
   es: {
@@ -156,7 +159,7 @@ const texts = {
     authorisedPersonEmailLabel: "Correo Electrónico de la Persona Autorizada:",
     authorisedPersonEmailHover:
       "Dirección de correo electrónico de la persona autorizada.",
-    contactLabel: "Contacto:",
+    contactLabel: "Contacto general del lab:",
     contactHover: "Contacto para recibir entregas para el laboratorio.",
     emailLabel: "Correo Electrónico:",
     emailHover:
@@ -195,6 +198,7 @@ const texts = {
     scryolockHover: "Tamaño más pequeño",
     cryolock: "Cryolock",
     cryolockHover: "Tamaño estándar",
+    switchLanguage: "Cambiar a Español",
   },
 
   pt: {
@@ -206,7 +210,7 @@ const texts = {
       "A pessoa autorizada a tomar decisões em nome da empresa e a assinar PO e/ou cotações para permitir que enviemos seu pedido.",
     authorisedPersonEmailLabel: "Email da Pessoa Autorizada:",
     authorisedPersonEmailHover: "Endereço de email da pessoa autorizada.",
-    contactLabel: "Contato:",
+    contactLabel: "Contato geral do lab:",
     contactHover: "Contato para receber entregas para o laboratório.",
     emailLabel: "Email:",
     emailHover:
@@ -245,6 +249,7 @@ const texts = {
     scryolockHover: "Tamanho menor",
     cryolock: "Cryolock",
     cryolockHover: "Tamanho padrão",
+    switchLanguage: "Mudar para Português",
   },
 };
 export default texts;

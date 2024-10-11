@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import "../styles.css";
 import texts from "./translations";
+import ProductList from "./ProductList";
 
 function Existingcustomers() {
   const [formData, setFormData] = useState({
@@ -9,6 +10,16 @@ function Existingcustomers() {
     company: "",
     email: "",
     telephone: "",
+    authorisedPerson: "",
+    companyName: "",
+    authorisedPersonEmail: "",
+    contact: "",
+    phone: "",
+    shippingAddress: "",
+    billingAddress: "",
+    vatTaxId: "",
+    invoicesSentTo: "",
+    invoicesSentTo: "",
     productInterest: [],
   });
 
@@ -20,7 +31,7 @@ function Existingcustomers() {
     setLanguage((prevLanguage) => (prevLanguage === "it" ? "en" : "it"));
   };
 
-  const toggleproductInterest = (prodotto) => {
+  const toggleProductInterest = (prodotto) => {
     setFormData((prevState) => {
       if (prodotto === "All Products") {
         const tuttiSelezionati = prevState.productInterest.length === 6;
@@ -68,6 +79,15 @@ function Existingcustomers() {
       company: formData.company,
       email: formData.email,
       telephone: formData.telephone,
+      authorisedPerson: formData.authorisedPerson,
+      companyName: formData.companyName,
+      authorisedPersonEmail: formData.authorisedPersonEmail,
+      contact: formData.contact,
+      phone: formData.phone,
+      shippingAddress: formData.shippingAddress,
+      billingAddress: formData.billingAddress,
+      vatTaxId: formData.vatTaxId,
+      invoicesSentTo: formData.invoicesSentTo,
       productInterest: formData.productInterest.join(", "),
     };
 
@@ -83,9 +103,8 @@ function Existingcustomers() {
           console.log("SUCCESSO!", response.status, response.text);
           setFormInviato(true);
           setTimeout(() => {
-            window.location.href =
-              "https://sea-turtle-app-qfyrw.ondigitalocean.app/";
-          }, 10000);
+            window.location.href = "https://www.caringivf.com/"; // Redirect after 3 seconds
+          }, 3000);
         },
         (error) => {
           console.error("FALLITO...", error);
@@ -282,92 +301,11 @@ function Existingcustomers() {
           <div className="tooltip-text">{currentText.emailHover}</div>
         </div>
 
-        <div className="form-group">
-          <label>{currentText.productList}:</label>
-          <div className="product-selection">
-            <button
-              type="button"
-              className={`product-item ${
-                formData.productInterest.includes("All Products")
-                  ? "selected"
-                  : ""
-              }`}
-              onClick={() => toggleproductInterest("All Products")}
-            >
-              <img
-                src="/caring-logo.png"
-                alt="Logo All Products"
-                className="product-logo"
-              />
-              <span>{currentText.allProducts}</span>
-              <div className="tooltip-text">Click to select all products</div>
-            </button>
-
-            <button
-              type="button"
-              className={`product-item ${
-                formData.productInterest.includes("Cryolock") ? "selected" : ""
-              }`}
-              onClick={() => toggleproductInterest("Cryolock")}
-            >
-              <img
-                src="/cryolock.jpeg"
-                alt="cryolock"
-                className="product-logo"
-              />
-              <span>{currentText.cryolock}</span>
-              <div className="tooltip-text">{currentText.cryolockHover}</div>
-            </button>
-
-            <button
-              type="button"
-              className={`product-item ${
-                formData.productInterest.includes("S-Cryolock")
-                  ? "selected"
-                  : ""
-              }`}
-              onClick={() => toggleproductInterest("S-Cryolock")}
-            >
-              <img
-                src="/s-cryolock.jpg"
-                alt="s-cryolock"
-                className="product-logo"
-              />
-              <span>{currentText.scryolock}</span>
-              <div className="tooltip-text">{currentText.scryolockHover}</div>
-            </button>
-
-            <button
-              type="button"
-              className={`product-item ${
-                formData.productInterest.includes("Digital Cameras")
-                  ? "selected"
-                  : ""
-              }`}
-              onClick={() => toggleproductInterest("Digital Cameras")}
-            >
-              <img src="/geri.jpeg" alt="Geri" className="product-logo" />
-              <span>{currentText.digitalCameras}</span>
-              <div className="tooltip-text">
-                {currentText.digitalCamerasHover}
-              </div>
-            </button>
-
-            <button
-              type="button"
-              className={`product-item ${
-                formData.productInterest.includes("Genea Caring Cryokit")
-                  ? "selected"
-                  : ""
-              }`}
-              onClick={() => toggleproductInterest("Genea Caring Cryokit")}
-            >
-              <img src="/gems.jpeg" alt="Gems" className="product-logo" />
-              <span>{currentText.cryokit}</span>
-              <div className="tooltip-text">{currentText.cryokitHover}</div>
-            </button>
-          </div>
-        </div>
+        <ProductList
+          currentText={currentText}
+          formData={formData}
+          toggleProductInterest={toggleProductInterest}
+        />
 
         <button type="submit" className="submit-button">
           {currentText.inviaButton}

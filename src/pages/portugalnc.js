@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import LeadForm from './components/LeadFormPortugal';
-import './styles.css';
+import { Link } from "react-router-dom";
+import LeadForm from "../components/LeadFormPortugal";
+import "../styles.css";
 
 function Portugese() {
   return (
