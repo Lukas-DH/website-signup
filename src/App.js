@@ -22,10 +22,13 @@ function App() {
       {/* <Route path="/" element={<HomePage />} /> */}
       <Route path="/" element={<RedirectToCaring />} />
       <Route path="/italync-88" element={<Italy />} />
+      <Route path="/italy" element={<Italy />} />
       <Route path="/existingcustomers" element={<Existingcustomers />} />
       <Route path="/spainnc-33" element={<Spain />} />
+      <Route path="/spain" element={<Spain />} />
       <Route path="/france" element={<France />} />
       <Route path="/portugalnc-43" element={<Portugal />} />
+      <Route path="/portugal" element={<Portugal />} />
     </Routes>
   );
 }
