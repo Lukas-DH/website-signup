@@ -170,7 +170,7 @@ function ModuloContattiItalia() {
         <ProductList
           currentText={currentText}
           formData={formData}
-          // toggleProductInterest={toggleProductInterest}
+          toggleProductInterest={toggleProductInterest}
         />
 
         <button type="submit" className="submit-button">
