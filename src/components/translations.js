@@ -223,9 +223,9 @@ const texts = {
     billingAddressLabel: "Endereço de Faturamento:",
     billingAddressHover:
       "Endereço para onde serão enviadas as faturas e a correspondência financeira.",
-    vatTaxIdLabel: "CNPJ/ID Fiscal:",
+    vatTaxIdLabel: "CIF/ID Fiscal:",
     vatTaxIdHover:
-      "O CNPJ ou Número de Identificação Fiscal da sua empresa para fins de faturamento.",
+      "O CIF ou Número de Identificação Fiscal da sua empresa para fins de faturamento.",
     invoicesSentToLabel: "Faturas Enviadas Para:",
     invoicesSentToHover:
       "O endereço de email para onde todas as faturas serão direcionadas.",
