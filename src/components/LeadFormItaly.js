@@ -197,6 +197,26 @@ function ModuloContattiItalia() {
 
             <button
               type="button"
+              className={`product-item ${formData.productInterest.includes('Cryolock') ? 'selected' : ''}`}
+              onClick={() => toggleproductInterest('Cryolock')}
+            >
+              <img src="/cryolock.jpeg" alt="cryolock" className="product-logo" />
+              <span>{currentText.product4}</span>
+              <div className="tooltip-text">{currentText.hover4}</div>
+            </button>
+
+            <button
+              type="button"
+              className={`product-item ${formData.productInterest.includes('S-Cryolock') ? 'selected' : ''}`}
+              onClick={() => toggleproductInterest('S-Cryolock')}
+            >
+              <img src="/s-cryolock.jpg" alt="s-cryolock" className="product-logo" />
+              <span>{currentText.product3}</span>
+              <div className="tooltip-text">{currentText.hover3}</div>
+            </button>
+            
+            <button
+              type="button"
               className={`product-item ${formData.productInterest.includes('Digital Cameras') ? 'selected' : ''}`}
               onClick={() => toggleproductInterest('Digital Cameras')}
             >
@@ -216,25 +236,7 @@ function ModuloContattiItalia() {
               <div className="tooltip-text">{currentText.hover2}</div>
             </button>
 
-            <button
-              type="button"
-              className={`product-item ${formData.productInterest.includes('S-Cryolock') ? 'selected' : ''}`}
-              onClick={() => toggleproductInterest('S-Cryolock')}
-            >
-              <img src="/s-cryolock.jpg" alt="s-cryolock" className="product-logo" />
-              <span>{currentText.product3}</span>
-              <div className="tooltip-text">{currentText.hover3}</div>
-            </button>
 
-            <button
-              type="button"
-              className={`product-item ${formData.productInterest.includes('Cryolock') ? 'selected' : ''}`}
-              onClick={() => toggleproductInterest('Cryolock')}
-            >
-              <img src="/cryolock.jpeg" alt="cryolock" className="product-logo" />
-              <span>{currentText.product4}</span>
-              <div className="tooltip-text">{currentText.hover4}</div>
-            </button>
           </div>
         </div>
 
