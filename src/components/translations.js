@@ -47,6 +47,12 @@ const texts = {
     cryolock: "Cryolock",
     cryolockHover: "Regular size",
     switchLanguage: "Switch to english",
+    Timelapse: "Timelapse",
+    witnessing: "Witnessing",
+    media: "Media",
+    witnessingHover: "Gidget",
+    TimelapseHover: "Geri",
+    mediaHover: "Gems",
   },
   it: {
     titleExisting: "Modulo di onboarding per clienti esistenti",
@@ -98,6 +104,12 @@ const texts = {
     cryolock: "Cryolock",
     cryolockHover: "Dimensioni standard",
     switchLanguage: "Passa a Italiano",
+    Timelapse: "Timelapse",
+    witnessing: "Witnessing",
+    media: "Media",
+    witnessingHover: "Gidget",
+    TimelapseHover: "Geri",
+    mediaHover: "Gems",
   },
 
   fr: {
@@ -150,6 +162,12 @@ const texts = {
     cryolock: "Cryolock",
     cryolockHover: "Taille standard",
     switchLanguage: "Passer en Français",
+    Timelapse: "Timelapse",
+    witnessing: "identitovigilence",
+    media: "milieux de culture",
+    witnessingHover: "Gidget",
+    TimelapseHover: "Geri",
+    mediaHover: "Gems",
   },
 
   es: {
@@ -203,6 +221,12 @@ const texts = {
     cryolock: "Cryolock",
     cryolockHover: "Tamaño estándar",
     switchLanguage: "Cambiar a Español",
+    Timelapse: "Timelapse",
+    witnessing: "Witnessing",
+    media: "Media",
+    witnessingHover: "Gidget",
+    TimelapseHover: "Geri",
+    mediaHover: "Gems",
   },
 
   pt: {
@@ -255,6 +279,12 @@ const texts = {
     cryolock: "Cryolock",
     cryolockHover: "Tamanho padrão",
     switchLanguage: "Mudar para Português",
+    Timelapse: "Timelapse",
+    witnessing: "Witnessing",
+    media: "Media",
+    witnessingHover: "Gidget",
+    TimelapseHover: "Geri",
+    mediaHover: "Gems",
   },
 };
 export default texts;

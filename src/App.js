@@ -4,9 +4,10 @@ import "./styles.css";
 import { Routes, Route } from "react-router-dom";
 import Italy from "./pages/italync";
 import Spain from "./pages/spainnc";
-import France from "./france";
+import France from "./pages/france";
 import Portugal from "./pages/portugalnc";
 import Existingcustomers from "./existingcustomers";
+import ExistingcustomersFrance from "./existingcustomersFrance";
 
 function RedirectToCaring() {
   useEffect(() => {
@@ -24,6 +25,10 @@ function App() {
       <Route path="/italync-88" element={<Italy />} />
       <Route path="/italy" element={<Italy />} />
       <Route path="/existingcustomers" element={<Existingcustomers />} />
+      <Route
+        path="/existingcustomersfrance"
+        element={<ExistingcustomersFrance />}
+      />
       <Route path="/spainnc-33" element={<Spain />} />
       <Route path="/spain" element={<Spain />} />
       <Route path="/france" element={<France />} />

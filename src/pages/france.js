@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import LeadForm from './components/LeadFormFrance';
-import './styles.css';
+import { Link } from "react-router-dom";
+import LeadForm from "../components/LeadFormFrance";
+import "../styles.css";
 
-function Spanish() {
+function French() {
   return (
     <div className="App">
       <header className="App-header">
@@ -21,4 +21,4 @@ function Spanish() {
   );
 }
 
-export default Spanish;
+export default French;
