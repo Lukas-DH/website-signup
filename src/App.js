@@ -24,7 +24,7 @@ function App() {
       <Route path="/" element={<RedirectToCaring />} />
       <Route path="/italync-88" element={<Italy />} />
       <Route path="/italy" element={<Italy />} />
-      <Route path="/existingcustomers" element={<Existingcustomers />} />
+      <Route path="/onboarding" element={<Existingcustomers />} />
       <Route
         path="/existingcustomersfrance"
         element={<ExistingcustomersFrance />}
