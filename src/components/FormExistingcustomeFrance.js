@@ -106,7 +106,8 @@ function Existingcustomers() {
           console.log("SUCCESSO!", response.status, response.text);
           setFormInviato(true);
           setTimeout(() => {
-            window.location.href = "https://www.caringivf.com/"; // Redirect after 3 seconds
+            window.location.href =
+              "https://www.linkedin.com/company/caring-ivf"; // Redirect after 3 seconds
           }, 3000);
         },
         (error) => {
