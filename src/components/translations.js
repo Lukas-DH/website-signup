@@ -1,6 +1,6 @@
 const texts = {
   en: {
-    titleExisting: "Onboarding Form for Existing Customers",
+    titleExisting: "Onboarding Form for Customers",
     companyNameLabel: "Company Name:",
     companyNameHover: "The registered name of your company or organization.",
 
@@ -55,7 +55,7 @@ const texts = {
     mediaHover: "Gems",
   },
   it: {
-    titleExisting: "Modulo di onboarding per clienti esistenti",
+    titleExisting: "Modulo di onboarding per clienti",
     companyNameLabel: "Nome della Società:",
     companyNameHover: "Il nome registrato della tua azienda o organizzazione.",
 
@@ -113,7 +113,7 @@ const texts = {
   },
 
   fr: {
-    titleExisting: "Formulaire d'intégration pour les clients existants",
+    titleExisting: "Formulaire d'intégration pour les clients",
     companyNameLabel: "Nom de l'Entreprise:",
     companyNameHover: "Le nom enregistré de votre entreprise ou organisation.",
 
@@ -171,7 +171,7 @@ const texts = {
   },
 
   es: {
-    titleExisting: "Formulario de incorporación para clientes existentes",
+    titleExisting: "Formulario de incorporación para clientes",
     companyNameLabel: "Nombre de la Empresa:",
     companyNameHover: "El nombre registrado de su empresa u organización.",
 
@@ -230,7 +230,7 @@ const texts = {
   },
 
   pt: {
-    titleExisting: "Formulário de integração para clientes existentes",
+    titleExisting: "Formulário de integração para clientes",
     companyNameLabel: "Nome da Empresa:",
     companyNameHover: "O nome registrado da sua empresa ou organização.",
 

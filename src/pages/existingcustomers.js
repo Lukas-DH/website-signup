@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import LeadForm from "./components/FormExistingcustomeFrance";
-import "./styles.css";
+import LeadForm from "../components/FormExistingcustomer";
+import "../styles.css";
 
 function Italian() {
   return (

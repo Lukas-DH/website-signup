@@ -6,12 +6,12 @@ import Italy from "./pages/italync";
 import Spain from "./pages/spainnc";
 import France from "./pages/france";
 import Portugal from "./pages/portugalnc";
-import Existingcustomers from "./existingcustomers";
-import ExistingcustomersFrance from "./existingcustomersFrance";
+import Existingcustomers from "./pages/existingcustomers";
+import ExistingcustomersFrance from "./pages/existingcustomersFrance";
 
 function RedirectToCaring() {
   useEffect(() => {
-    window.location.href = "https://www.caringivf.com";
+    window.location.href = "https://www.linkedin.com/company/caring-ivf";
   }, []);
 
   return null;
