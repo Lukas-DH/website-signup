@@ -11,7 +11,7 @@ import ExistingcustomersFrance from "./pages/existingcustomersFrance";
 
 function RedirectToCaring() {
   useEffect(() => {
-    window.location.href = "https://www.linkedin.com/company/caring-ivf";
+    window.location.href = "https://www.caringivf.com/";
   }, []);
 
   return null;

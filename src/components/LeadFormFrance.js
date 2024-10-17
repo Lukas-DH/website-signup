@@ -87,8 +87,7 @@ function ModuloContattiItalia() {
           console.log("SUCCESSO!", response.status, response.text);
           setFormInviato(true);
           setTimeout(() => {
-            window.location.href =
-              "https://www.linkedin.com/company/caring-ivf";
+            window.location.href = "https://www.caringivf.com/";
           }, 3000);
         },
         (error) => {
