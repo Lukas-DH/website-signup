@@ -123,7 +123,7 @@ const ProductList = ({ currentText, formData, toggleProductInterest }) => {
           }`}
           onClick={() => toggleProductInterest("Leica")}
         >
-          <img src="/Leica.jpeg" alt="Leica" className="product-logo" />
+          <img src="/leica.jpeg" alt="Leica" className="product-logo" />
           <span>{currentText.leica}</span>
           <div className="tooltip-text">{currentText.leicaHover}</div>
         </button>
