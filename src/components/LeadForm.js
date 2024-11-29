@@ -80,7 +80,7 @@ function LeadForm() {
           setFormSubmitted(true); // Set form submission state to true
           setTimeout(() => {
             window.location.href =
-              "https://sea-turtle-app-qfyrw.ondigitalocean.app/"; // Redirect after 10 seconds
+              "https://sea-turtle-app-qfyrw.ondigitalocean.app/france"; // Redirect after 10 seconds
           }, 10000); // 10000ms = 10 seconds
         },
         (error) => {
