@@ -24,7 +24,7 @@ function ModuloContattiItalia() {
   const toggleProductInterest = (prodotto) => {
     setFormData((prevState) => {
       if (prodotto === "All Products") {
-        const tuttiSelezionati = prevState.productInterest.length === 9;
+        const tuttiSelezionati = prevState.productInterest.length === 10;
         if (tuttiSelezionati) {
           return {
             ...prevState,
@@ -43,6 +43,7 @@ function ModuloContattiItalia() {
               "S-Cryolock",
               "Cryolock",
               "Culture Media",
+              "Leica",
             ],
           };
         }

@@ -116,6 +116,17 @@ const ProductList = ({ currentText, formData, toggleProductInterest }) => {
           <span>{currentText.cryokit}</span>
           <div className="tooltip-text">{currentText.cryokitHover}</div>
         </button>
+        <button
+          type="button"
+          className={`product-item ${
+            formData.productInterest.includes("Leica") ? "selected" : ""
+          }`}
+          onClick={() => toggleProductInterest("Leica")}
+        >
+          <img src="/Leica.jpeg" alt="Leica" className="product-logo" />
+          <span>{currentText.leica}</span>
+          <div className="tooltip-text">{currentText.leicaHover}</div>
+        </button>
       </div>
     </div>
   );

@@ -110,6 +110,8 @@ const texts = {
     witnessingHover: "Gidget",
     TimelapseHover: "Geri",
     mediaHover: "Gems",
+    leica: "Leica",
+    leicaHover: "Microscopie",
   },
 
   fr: {
@@ -168,6 +170,8 @@ const texts = {
     witnessingHover: "Gidget",
     TimelapseHover: "Geri",
     mediaHover: "Gems",
+    leica: "Leica",
+    leicaHover: "Microscopie",
   },
 
   es: {
@@ -227,6 +231,8 @@ const texts = {
     witnessingHover: "Gidget",
     TimelapseHover: "Geri",
     mediaHover: "Gems",
+    leica: "Leica",
+    leicaHover: "Microscopie",
   },
 
   pt: {
@@ -285,6 +291,8 @@ const texts = {
     witnessingHover: "Gidget",
     TimelapseHover: "Geri",
     mediaHover: "Gems",
+    leica: "Leica",
+    leicaHover: "Microscopie",
   },
 };
 export default texts;
