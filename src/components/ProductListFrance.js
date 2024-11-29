@@ -41,7 +41,7 @@ const ProductList = ({ currentText, formData, toggleProductInterest }) => {
           onClick={() => toggleProductInterest("Witnessing")}
         >
           <img
-            src="/Witnessing.jpeg"
+            src="/witnessing.jpeg"
             alt="Witnessing"
             className="product-logo"
           />
