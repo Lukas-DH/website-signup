@@ -8,6 +8,7 @@ import France from "./pages/france";
 import Portugal from "./pages/portugalnc";
 import Existingcustomers from "./pages/existingcustomers";
 import ExistingcustomersFrance from "./pages/existingcustomersFrance";
+import MapboxWithSearch from "./pages/ivfmap";
 
 function RedirectToCaring() {
   useEffect(() => {
@@ -34,6 +35,7 @@ function App() {
       <Route path="/france" element={<France />} />
       <Route path="/portugalnc-43" element={<Portugal />} />
       <Route path="/portugal" element={<Portugal />} />
+      <Route path="/ivfmapeu" element={<MapboxWithSearch />} />
     </Routes>
   );
 }
