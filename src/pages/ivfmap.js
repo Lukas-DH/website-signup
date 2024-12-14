@@ -17,7 +17,7 @@ const MapboxWithSearch = () => {
       try {
         const response = await fetch(
           // "https://clinicmaps.s3.eu-west-3.amazonaws.com/data.csv"
-          "https://clinicmaps.s3.eu-west-3.amazonaws.com/countries_cities_names_with_details_3.csv"
+          "/countries_cities_names_with_details_3.csv"
         );
         const csvText = await response.text();
 
@@ -84,7 +84,6 @@ const MapboxWithSearch = () => {
         style={{ width: "100%", height: "100vh" }}
         mapStyle="mapbox://styles/mapbox/streets-v11"
         mapboxAccessToken={MAPBOX_TOKEN}
-        collectResourceTiming={false} // Disable telemetry
       >
         {/* Display Filtered Markers */}
         {filteredMarkers.map((marker, index) => (
