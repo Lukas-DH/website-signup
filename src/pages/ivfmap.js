@@ -5,16 +5,6 @@ import "mapbox-gl/dist/mapbox-gl.css";
 
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
 
-const isValidCoordinate = (value) => {
-  const num = parseFloat(value);
-  return !isNaN(num) && num >= -90 && num <= 90; // For latitude
-};
-
-const isValidLongitude = (value) => {
-  const num = parseFloat(value);
-  return !isNaN(num) && num >= -180 && num <= 180; // For longitude
-};
-
 const MapboxWithSearch = () => {
   const [markers, setMarkers] = useState([]);
   const [filteredMarkers, setFilteredMarkers] = useState([]);
@@ -26,6 +16,7 @@ const MapboxWithSearch = () => {
     const fetchCSV = async () => {
       try {
         const response = await fetch(
+          // "https://clinicmaps.s3.eu-west-3.amazonaws.com/data.csv"
           "https://clinicmaps.s3.eu-west-3.amazonaws.com/countries_cities_names_with_details_3.csv"
         );
         const csvText = await response.text();
@@ -34,11 +25,9 @@ const MapboxWithSearch = () => {
           header: true,
           skipEmptyLines: true,
           complete: (result) => {
-            const validMarkers = result.data.filter((row) => {
-              const { Latitude, Longitude } = row;
-              return isValidCoordinate(Latitude) && isValidLongitude(Longitude);
-            });
-
+            const validMarkers = result.data.filter(
+              (row) => row.Latitude && row.Longitude
+            );
             setMarkers(validMarkers);
             setFilteredMarkers(validMarkers); // Initialize filtered markers with all markers.
           },
@@ -67,6 +56,7 @@ const MapboxWithSearch = () => {
   return (
     <div style={{ position: "relative" }}>
       {/* Search Bar */}
+
       <div style={{ position: "absolute", top: 10, left: 10, zIndex: 10 }}>
         <button onClick={() => setSearchQuery("")}>Clear</button>
         <input
@@ -97,53 +87,48 @@ const MapboxWithSearch = () => {
         collectResourceTiming={false} // Disable telemetry
       >
         {/* Display Filtered Markers */}
-        {filteredMarkers.map((marker, index) => {
-          const lat = parseFloat(marker.Latitude);
-          const lon = parseFloat(marker.Longitude);
-
-          // Skip invalid coordinates
-          if (!isValidCoordinate(lat) || !isValidLongitude(lon)) {
-            return null;
-          }
-
-          return (
-            <Marker key={index} latitude={lat} longitude={lon} anchor="bottom">
-              <div
-                onMouseEnter={() => setHoveredMarker(marker)}
-                onMouseLeave={() => setHoveredMarker(null)}
-                onClick={() => setSelectedMarker(marker)}
-                style={{
-                  background: "blue",
-                  borderRadius: "50%",
-                  width: "10px",
-                  height: "10px",
-                  cursor: "pointer",
-                  position: "relative",
-                }}
-              >
-                {/* Hover Tooltip */}
-                {hoveredMarker === marker && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      bottom: "20px",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                      background: "white",
-                      padding: "5px",
-                      borderRadius: "5px",
-                      boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-                      fontSize: "12px",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    {marker.ClinicName || "Unknown Marker"}
-                  </div>
-                )}
-              </div>
-            </Marker>
-          );
-        })}
+        {filteredMarkers.map((marker, index) => (
+          <Marker
+            key={index}
+            latitude={parseFloat(marker.Latitude)}
+            longitude={parseFloat(marker.Longitude)}
+            anchor="bottom"
+          >
+            <div
+              onMouseEnter={() => setHoveredMarker(marker)}
+              onMouseLeave={() => setHoveredMarker(null)}
+              onClick={() => setSelectedMarker(marker)}
+              style={{
+                background: "blue",
+                borderRadius: "50%",
+                width: "10px",
+                height: "10px",
+                cursor: "pointer",
+                position: "relative",
+              }}
+            >
+              {/* Hover Tooltip */}
+              {hoveredMarker === marker && (
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "20px",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    background: "white",
+                    padding: "5px",
+                    borderRadius: "5px",
+                    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+                    fontSize: "12px",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {marker.ClinicName || "Unknown Marker"}
+                </div>
+              )}
+            </div>
+          </Marker>
+        ))}
 
         {/* Popup for Selected Marker */}
         {selectedMarker && (
