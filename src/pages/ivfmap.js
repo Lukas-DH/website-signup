@@ -94,6 +94,7 @@ const MapboxWithSearch = () => {
         style={{ width: "100%", height: "100vh" }}
         mapStyle="mapbox://styles/mapbox/streets-v11"
         mapboxAccessToken={MAPBOX_TOKEN}
+        collectResourceTiming={false} // Disable telemetry
       >
         {/* Display Filtered Markers */}
         {filteredMarkers.map((marker, index) => {
