@@ -93,7 +93,7 @@ const MapboxWithSearch = () => {
             longitude={parseFloat(marker.Longitude)}
             anchor="bottom"
           >
-            <div
+            {/* <div
               onMouseEnter={() => setHoveredMarker(marker)}
               onMouseLeave={() => setHoveredMarker(null)}
               onClick={() => setSelectedMarker(marker)}
@@ -106,7 +106,7 @@ const MapboxWithSearch = () => {
                 position: "relative",
               }}
             >
-              {/* Hover Tooltip */}
+           
               {hoveredMarker === marker && (
                 <div
                   style={{
@@ -125,7 +125,7 @@ const MapboxWithSearch = () => {
                   {marker.ClinicName || "Unknown Marker"}
                 </div>
               )}
-            </div>
+            </div> */}
           </Marker>
         ))}
 
