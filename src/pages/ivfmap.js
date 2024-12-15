@@ -17,7 +17,7 @@ const MapboxWithSearch = () => {
       try {
         const response = await fetch(
           // "https://clinicmaps.s3.eu-west-3.amazonaws.com/data.csv"
-          "/countries_cities_names_with_details_3.csv"
+          "https://clinicmaps.s3.eu-west-3.amazonaws.com/countries_cities_names_with_details_3.csv"
         );
         const csvText = await response.text();
 
@@ -84,6 +84,7 @@ const MapboxWithSearch = () => {
         style={{ width: "100%", height: "100vh" }}
         mapStyle="mapbox://styles/mapbox/streets-v11"
         mapboxAccessToken={MAPBOX_TOKEN}
+        collectResourceTiming={false} // Disable telemetry
       >
         {/* Display Filtered Markers */}
         {filteredMarkers.map((marker, index) => (
@@ -93,7 +94,7 @@ const MapboxWithSearch = () => {
             longitude={parseFloat(marker.Longitude)}
             anchor="bottom"
           >
-            {/* <div
+            <div
               onMouseEnter={() => setHoveredMarker(marker)}
               onMouseLeave={() => setHoveredMarker(null)}
               onClick={() => setSelectedMarker(marker)}
@@ -106,7 +107,7 @@ const MapboxWithSearch = () => {
                 position: "relative",
               }}
             >
-           
+              {/* Hover Tooltip */}
               {hoveredMarker === marker && (
                 <div
                   style={{
@@ -125,7 +126,7 @@ const MapboxWithSearch = () => {
                   {marker.ClinicName || "Unknown Marker"}
                 </div>
               )}
-            </div> */}
+            </div>
           </Marker>
         ))}
 
