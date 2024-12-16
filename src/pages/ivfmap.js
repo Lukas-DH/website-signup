@@ -6,47 +6,8 @@ import "mapbox-gl/dist/mapbox-gl.css";
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
 
 const MapboxWithSearch = () => {
-  const [markers, setMarkers] = useState([
-    {
-      Latitude: 48.8566,
-      Longitude: 2.3522,
-      City: "Paris",
-      ClinicName: "Sample Clinic Paris",
-      Address: "123 Paris Street, France",
-      country: "France",
-      Website: "https://example.com",
-    },
-    {
-      Latitude: 41.9028,
-      Longitude: 12.4964,
-      City: "Rome",
-      ClinicName: "Sample Clinic Rome",
-      Address: "456 Rome Avenue, Italy",
-      country: "Italy",
-      Website: "https://example.com",
-    },
-  ]);
-
-  const [filteredMarkers, setFilteredMarkers] = useState([
-    {
-      Latitude: 48.8566,
-      Longitude: 2.3522,
-      City: "Paris",
-      ClinicName: "Sample Clinic Paris",
-      Address: "123 Paris Street, France",
-      country: "France",
-      Website: "https://example.com",
-    },
-    {
-      Latitude: 41.9028,
-      Longitude: 12.4964,
-      City: "Rome",
-      ClinicName: "Sample Clinic Rome",
-      Address: "456 Rome Avenue, Italy",
-      country: "Italy",
-      Website: "https://example.com",
-    },
-  ]);
+  const [markers, setMarkers] = useState([]);
+  const [filteredMarkers, setFilteredMarkers] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedMarker, setSelectedMarker] = useState(null);
   const [hoveredMarker, setHoveredMarker] = useState(null);
@@ -217,6 +178,30 @@ const MapboxWithSearch = () => {
           </Popup>
         )}
       </Map>
+      {/* Advertising Banner Overlay */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "20px",
+          right: "20px",
+          zIndex: 10,
+          backgroundColor: "#ffeb3b",
+          padding: "10px 20px",
+          borderRadius: "5px",
+          boxShadow: "0 2px 6px rgba(0, 0, 0, 0.2)",
+          textAlign: "center",
+          cursor: "pointer",
+        }}
+        onClick={() =>
+          window.open(
+            "https://sea-turtle-app-qfyrw.ondigitalocean.app/onboarding",
+            "_blank"
+          )
+        }
+      >
+        <strong>🌟 Limited Time Offer!</strong> <br />
+        CRYO LOCK LOCK LOCK.
+      </div>
     </div>
   );
 };
