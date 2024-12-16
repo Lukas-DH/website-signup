@@ -191,6 +191,8 @@ const MapboxWithSearch = () => {
           boxShadow: "0 2px 6px rgba(0, 0, 0, 0.2)",
           textAlign: "center",
           cursor: "pointer",
+          width: "auto",
+          maxWidth: "300px",
         }}
         onClick={() =>
           window.open(
@@ -198,10 +200,26 @@ const MapboxWithSearch = () => {
             "_blank"
           )
         }
+        className="advert-banner"
       >
-        <strong>🌟 Limited Time Offer!</strong> <br />
+        <strong>🌟 Special Offer!</strong> <br />
         CRYO LOCK LOCK LOCK.
       </div>
+
+      <style>
+        {`
+  @media (max-width: 768px) {
+    .advert-banner {
+      bottom: 10px; /* Adjust spacing */
+      right: 50%;
+      transform: translateX(50%); /* Center horizontally */
+      width: 90%; /* Full width with padding */
+      max-width: none;
+      font-size: 12px; /* Adjust font size */
+    }
+  }
+  `}
+      </style>
     </div>
   );
 };
