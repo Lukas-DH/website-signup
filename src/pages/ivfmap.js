@@ -6,8 +6,47 @@ import "mapbox-gl/dist/mapbox-gl.css";
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
 
 const MapboxWithSearch = () => {
-  const [markers, setMarkers] = useState([]);
-  const [filteredMarkers, setFilteredMarkers] = useState([]);
+  const [markers, setMarkers] = useState([
+    {
+      Latitude: 48.8566,
+      Longitude: 2.3522,
+      City: "Paris",
+      ClinicName: "Sample Clinic Paris",
+      Address: "123 Paris Street, France",
+      country: "France",
+      Website: "https://example.com",
+    },
+    {
+      Latitude: 41.9028,
+      Longitude: 12.4964,
+      City: "Rome",
+      ClinicName: "Sample Clinic Rome",
+      Address: "456 Rome Avenue, Italy",
+      country: "Italy",
+      Website: "https://example.com",
+    },
+  ]);
+
+  const [filteredMarkers, setFilteredMarkers] = useState([
+    {
+      Latitude: 48.8566,
+      Longitude: 2.3522,
+      City: "Paris",
+      ClinicName: "Sample Clinic Paris",
+      Address: "123 Paris Street, France",
+      country: "France",
+      Website: "https://example.com",
+    },
+    {
+      Latitude: 41.9028,
+      Longitude: 12.4964,
+      City: "Rome",
+      ClinicName: "Sample Clinic Rome",
+      Address: "456 Rome Avenue, Italy",
+      country: "Italy",
+      Website: "https://example.com",
+    },
+  ]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedMarker, setSelectedMarker] = useState(null);
   const [hoveredMarker, setHoveredMarker] = useState(null);
@@ -52,6 +91,7 @@ const MapboxWithSearch = () => {
     );
     setFilteredMarkers(results);
   }, [searchQuery, markers]);
+  console.log(filteredMarkers);
 
   return (
     <div style={{ position: "relative" }}>
