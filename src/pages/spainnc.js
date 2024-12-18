@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import LeadForm from "../components/LeadFormSpain";
 import "../styles.css";
 

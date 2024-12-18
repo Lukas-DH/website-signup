@@ -27,6 +27,31 @@ const texts = {
     invoicesSentToHover:
       "The email address where all invoices will be directed.",
     title: "Subscribe for product information",
+    specialMessage: {
+      offer: "✨Special offer✨",
+      title: "Prepare your IVF lab for the year ahead",
+      content: [
+        {
+          heading: "CryoLock Vit Straws",
+          description: "Safe, efficient cryopreservation you can trust.",
+        },
+        {
+          heading: "GEMS Vit & Warm Media",
+          description: "Reliable media for consistent, superior results.",
+        },
+        {
+          heading: "3. Validation Support",
+          description:
+            "Expert assistance to integrate and validate new protocols.",
+        },
+      ],
+      closing: {
+        title: "How to mitigate risk?",
+        message:
+          "❄️Diversify suppliers and stay ahead in 2025. Take advantage of this limited-time offer to ensure your lab is ready for anything and recieve Gems media and Cryolock Vitrification straws for validation*.❄️",
+        cta: "📧 Contact us today! ",
+      },
+    },
     nameLabel: "Full Name:",
     companyLabel: "Center, Clinic, Hospital:",
     telephoneLabel: "telephone (Optional):",
@@ -84,6 +109,33 @@ const texts = {
     invoicesSentToHover:
       "L'indirizzo email a cui verranno inviate tutte le fatture.",
     title: "Iscriviti per informazioni sui prodotti",
+    specialMessage: {
+      offer: "✨Offerta speciale✨",
+      title: "Preparate il vostro laboratorio di FIV per il prossimo anno",
+      content: [
+        {
+          heading: "Cannucce CryoLock Vit",
+          description:
+            "Crioconservazione sicura ed efficiente su cui potete contare.",
+        },
+        {
+          heading: "Media GEMS Vit & Warm",
+          description: "Media affidabili per risultati coerenti e superiori.",
+        },
+        {
+          heading: "3. Supporto per la Validazione",
+          description:
+            "Assistenza esperta per integrare e validare nuovi protocolli.",
+        },
+      ],
+      closing: {
+        title: "Come mitigare il rischio?",
+        message:
+          "❄️Diversificate i fornitori e anticipate il 2025. Approfittate di questa offerta a tempo limitato per assicurarvi che il vostro laboratorio sia pronto a tutto e ricevere i media Gems e le cannucce di vitrificazione Cryolock per la validazione*.❄️",
+        cta: "📧 Contattateci oggi stesso!",
+      },
+    },
+
     nameLabel: "Nome Completo:",
     companyLabel: "Centro, Clinica, Ospedale:",
     telephoneLabel: "telefono (Opzionale):",
@@ -144,6 +196,34 @@ const texts = {
     invoicesSentToHover:
       "L'adresse email à laquelle toutes les factures seront envoyées.",
     title: "Abonnez-vous pour recevoir des informations sur les produits",
+    specialMessage: {
+      offer: "✨Offre spéciale✨",
+      title: "Préparez votre laboratoire de FIV pour l'année à venir",
+      content: [
+        {
+          heading: "Pailles CryoLock Vit",
+          description:
+            "Une cryoconservation sûre et efficace sur laquelle vous pouvez compter.",
+        },
+        {
+          heading: "Médias GEMS Vit & Warm",
+          description:
+            "Des médias fiables pour des résultats cohérents et supérieurs.",
+        },
+        {
+          heading: "3. Support de Validation",
+          description:
+            "Assistance experte pour intégrer et valider de nouveaux protocoles.",
+        },
+      ],
+      closing: {
+        title: "Comment atténuer les risques ?",
+        message:
+          "❄️Diversifiez vos fournisseurs et prenez de l'avance en 2025. Profitez de cette offre à durée limitée pour vous assurer que votre laboratoire est prêt à tout et recevez des médias Gems et des pailles de vitrification CryoLock pour validation*.❄️",
+        cta: "📧 Contactez-nous dès aujourd'hui !",
+      },
+    },
+
     nameLabel: "Nom Complet:",
     companyLabel: "Centre, Clinique, Hôpital:",
     telephoneLabel: "téléphone (Optionnel):",
@@ -205,6 +285,34 @@ const texts = {
     invoicesSentToHover:
       "La dirección de correo electrónico a la que se enviarán todas las facturas.",
     title: "Suscríbase para recibir información del producto",
+    specialMessage: {
+      offer: "✨Oferta especial✨",
+      title: "Prepare su laboratorio de FIV para el próximo año",
+      content: [
+        {
+          heading: "Pajuelas CryoLock Vit",
+          description:
+            "Criopreservación segura y eficiente en la que puede confiar.",
+        },
+        {
+          heading: "Medios GEMS Vit & Warm",
+          description:
+            "Medios fiables para resultados consistentes y superiores.",
+        },
+        {
+          heading: "3. Soporte de Validación",
+          description:
+            "Asistencia experta para integrar y validar nuevos protocolos.",
+        },
+      ],
+      closing: {
+        title: "¿Cómo mitigar el riesgo?",
+        message:
+          "❄️Diversifique proveedores y anticípese a 2025. Aproveche esta oferta por tiempo limitado para asegurarse de que su laboratorio esté listo para cualquier eventualidad y reciba medios Gems y pajuelas de vitrificación Cryolock para validación*.❄️",
+        cta: "📧 ¡Contáctenos hoy!",
+      },
+    },
+
     nameLabel: "Nombre Completo:",
     companyLabel: "Centro, Clínica, Hospital:",
     telephoneLabel: "teléfono (Opcional):",
@@ -265,6 +373,33 @@ const texts = {
     invoicesSentToHover:
       "O endereço de email para onde todas as faturas serão direcionadas.",
     title: "Inscreva-se para informações sobre produtos",
+    specialMessage: {
+      offer: "✨Oferta especial✨",
+      title: "Prepare seu laboratório de FIV para o próximo ano",
+      content: [
+        {
+          heading: "Canudos CryoLock Vit",
+          description:
+            "Criopreservação segura e eficiente em que você pode confiar.",
+        },
+        {
+          heading: "Meios GEMS Vit & Warm",
+          description:
+            "Meios confiáveis para resultados consistentes e superiores.",
+        },
+        {
+          heading: "3. Suporte à Validação",
+          description:
+            "Assistência especializada para integrar e validar novos protocolos.",
+        },
+      ],
+      closing: {
+        title: "Como mitigar riscos?",
+        message:
+          "❄️Diversifique fornecedores e antecipe-se a 2025. Aproveite esta oferta por tempo limitado para garantir que seu laboratório esteja preparado para tudo e receba meios Gems e canudos de vitrificação CryoLock para validação*.❄️",
+        cta: "📧 Entre em contato conosco hoje!",
+      },
+    },
     nameLabel: "Nome Completo:",
     companyLabel: "Centro, Clínica, Hospital:",
     telephoneLabel: "telefone (Opcional):",

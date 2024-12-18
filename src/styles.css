@@ -45,6 +45,27 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.lead-form-container-popup {
+  background-color: white;
+  padding: 0px 15px 0px 15px;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  text-align: center;
+  margin-top: 0px;
+  /* object-fit: contain; */
+}
+
+.special-message-image {
+  max-width: 100%;
+  width: 350px;
+  height: auto;
+  border-radius: 8px;
+}
+
 .form-group {
   margin-bottom: 20px;
 }
@@ -96,21 +117,6 @@ p {
 }
 
 .product-item {
-  flex: 1 1 150px; /* Grow to fit, but with a minimum width of 150px */
-  max-width: 150px; /* Ensure no item exceeds 150px in width */
-  height: 150px; /* Keep the height fixed for uniformity */
-  box-sizing: border-box;
-}
-
-/* .product-selection {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-    gap: 10px; 
-    justify-items: center; 
-    margin-top: 15px;
-  } */
-
-.product-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,6 +131,7 @@ p {
   max-width: 150px; /* Limit the width */
   height: 150px; /* Fixed height for uniformity */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 15px #80698d;
+  box-sizing: border-box;
 }
 
 .product-item input[type="checkbox"] {
@@ -143,6 +150,39 @@ p {
 }
 
 .product-item:hover {
+  background-color: #e5c2f8;
+}
+
+.product-item-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid transparent;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  width: 100%; /* Full width inside the grid cell */
+}
+
+.product-item-popup input[type="checkbox"] {
+  /* Increase the size of the checkboxes */
+  width: 20px;
+  height: 20px;
+  margin-bottom: 8px;
+}
+
+.product-item-popup.selected {
+  background-color: #d892ff;
+  color: white;
+  border-color: #7129a6;
+  animation: glowing 1.5s infinite alternate;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 15px #d892ff;
+}
+
+.product-item-popup:hover {
   background-color: #e5c2f8;
 }
 

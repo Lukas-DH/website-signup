@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Map, { Marker, Popup } from "react-map-gl";
 import Papa from "papaparse";
 import "mapbox-gl/dist/mapbox-gl.css";
+import LeadForm from "../components/popupSpecial";
 
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
 
@@ -11,6 +12,7 @@ const MapboxWithSearch = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedMarker, setSelectedMarker] = useState(null);
   const [hoveredMarker, setHoveredMarker] = useState(null);
+  const [showLeadForm, setShowLeadForm] = useState(false); // State to show LeadForm
 
   useEffect(() => {
     const fetchCSV = async () => {
@@ -38,6 +40,14 @@ const MapboxWithSearch = () => {
     };
 
     fetchCSV();
+
+    // Trigger LeadForm popup after 15 seconds
+    const timer = setTimeout(() => {
+      setShowLeadForm(true);
+    }, 1000); // Optimal delay time (15 seconds)
+
+    // Cleanup timer on unmount
+    return () => clearTimeout(timer);
   }, []);
 
   // Filter markers based on the search query
@@ -95,39 +105,37 @@ const MapboxWithSearch = () => {
             longitude={parseFloat(marker.Longitude)}
             anchor="bottom"
           >
-            <div
+            <img
+              src="/pregnant.png"
+              alt="Custom Marker"
+              style={{
+                width: "30px", // Adjust size of the marker
+                height: "30px",
+                cursor: "pointer",
+              }}
               onMouseEnter={() => setHoveredMarker(marker)}
               onMouseLeave={() => setHoveredMarker(null)}
               onClick={() => setSelectedMarker(marker)}
-              style={{
-                background: "blue",
-                borderRadius: "50%",
-                width: "10px",
-                height: "10px",
-                cursor: "pointer",
-                position: "relative",
-              }}
-            >
-              {/* Hover Tooltip */}
-              {hoveredMarker === marker && (
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: "20px",
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    background: "white",
-                    padding: "5px",
-                    borderRadius: "5px",
-                    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-                    fontSize: "12px",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {marker.ClinicName || "Unknown Marker"}
-                </div>
-              )}
-            </div>
+            />
+            {/* Hover Tooltip */}
+            {hoveredMarker === marker && (
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "40px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  background: "white",
+                  padding: "5px",
+                  borderRadius: "5px",
+                  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+                  fontSize: "12px",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {marker.ClinicName || "Unknown Marker"}
+              </div>
+            )}
           </Marker>
         ))}
 
@@ -178,12 +186,56 @@ const MapboxWithSearch = () => {
           </Popup>
         )}
       </Map>
+
+      {/* Lead Form Popup */}
+      {showLeadForm && (
+        <div
+          style={{
+            position: "fixed",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            zIndex: 1000,
+            background: "white",
+            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+            borderRadius: "10px",
+            padding: "20px",
+            maxWidth: "500px",
+            width: "80%",
+            maxHeight: "80%",
+
+            overflowY: "auto" /* Adds vertical scroll if content overflows */,
+          }}
+        >
+          <button
+            onClick={() => setShowLeadForm(false)}
+            style={{
+              position: "sticky",
+              top: "10px",
+              left: "900%",
+              background: "red",
+              color: "white",
+              border: "none",
+              cursor: "pointer",
+              borderRadius: "50%",
+              width: "20px",
+              height: "20px",
+              fontSize: "14px",
+              lineHeight: "20px",
+            }}
+          >
+            &times;
+          </button>
+          <LeadForm /> {/* Your custom LeadForm component */}
+        </div>
+      )}
+
       {/* Advertising Banner Overlay */}
       <div
         style={{
           position: "absolute",
           bottom: "20px",
-          right: "20px",
+          right: "10px",
           zIndex: 10,
           backgroundColor: "#ffeb3b",
           padding: "10px 20px",
@@ -202,8 +254,22 @@ const MapboxWithSearch = () => {
         }
         className="advert-banner"
       >
-        <strong>🌟 Special Offer!</strong> <br />
-        CRYO LOCK LOCK LOCK.
+        <strong> ❄️Vitrification Offer! &rarr; Caring Cryokit</strong> <br />
+        CRYOLOCK + GeneaBiomedx Media.
+        <br />
+        🌟Validate a for 2025🌟
+        <br />
+        {/* Image added below */}
+        {/* <img
+          src="gems.jpeg"
+          alt="Cryokit Offer"
+          style={{
+            marginTop: "10px", // Add space above the image
+            width: "100%", // Responsive width
+            maxWidth: "150px", // Optional: Limit image width
+            height: "auto", // Maintain aspect ratio
+          }}
+        /> */}
       </div>
 
       <style>
@@ -211,8 +277,8 @@ const MapboxWithSearch = () => {
   @media (max-width: 768px) {
     .advert-banner {
       bottom: 10px; /* Adjust spacing */
-      right: 50%;
-      transform: translateX(50%); /* Center horizontally */
+      right: 10px;
+      transform: translateX(0%); /* Center horizontally */
       width: 90%; /* Full width with padding */
       max-width: none;
       font-size: 12px; /* Adjust font size */

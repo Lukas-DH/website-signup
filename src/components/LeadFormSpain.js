@@ -125,6 +125,7 @@ function ModuloContattiItalia() {
             required
           />
         </div>
+
         <div className="form-group">
           <label htmlFor="company">
             {currentText.companyLabel}
@@ -155,6 +156,7 @@ function ModuloContattiItalia() {
             required
           />
         </div>
+
         <div className="form-group">
           <label htmlFor="telephone">{currentText.telephoneLabel}</label>
           <input
