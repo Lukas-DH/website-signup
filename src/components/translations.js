@@ -48,8 +48,8 @@ const texts = {
       closing: {
         title: "How to mitigate risk?",
         message:
-          "❄️Diversify suppliers and stay ahead in 2025. Take advantage of this limited-time offer to ensure your lab is ready for anything and recieve Gems media and Cryolock Vitrification straws for validation*.❄️",
-        cta: "📧 Contact us today! ",
+          "❄️Diversify suppliers and stay ahead in 2025. Limited-time offer - Gems media and Cryolock Vitrification straws for validation*.❄️",
+        cta: "📧 Contact us to find out more! ",
       },
     },
     nameLabel: "Full Name:",
@@ -135,8 +135,8 @@ const texts = {
       closing: {
         title: "Come mitigare il rischio?",
         message:
-          "❄️Diversificate i fornitori e anticipate il 2025. Approfittate di questa offerta a tempo limitato per assicurarvi che il vostro laboratorio sia pronto a tutto e ricevere i media Gems e le cannucce di vitrificazione Cryolock per la validazione*.❄️",
-        cta: "📧 Contattateci oggi stesso!",
+          "❄️Diversifica i fornitori e rimani avanti nel 2025. Offerta a tempo limitato - Mezzi Gems e cannucce Cryolock per vitrificazione per validazione*.❄️",
+        cta: "📧 Contattaci per saperne di più!",
       },
     },
 
@@ -225,8 +225,8 @@ const texts = {
       closing: {
         title: "Comment atténuer les risques ?",
         message:
-          "❄️Diversifiez vos fournisseurs et prenez de l'avance en 2025. Profitez de cette offre à durée limitée pour vous assurer que votre laboratoire est prêt à tout et recevez des médias Gems et des pailles de vitrification CryoLock pour validation*.❄️",
-        cta: "📧 Contactez-nous dès aujourd'hui !",
+          "❄️Diversifiez vos fournisseurs et prenez de l’avance en 2025. Offre limitée - Médias Gems et pailles Cryolock pour vitrification à des fins de validation*.❄️",
+        cta: "📧 Contactez-nous pour en savoir plus !",
       },
     },
 
@@ -316,8 +316,8 @@ const texts = {
       closing: {
         title: "¿Cómo mitigar el riesgo?",
         message:
-          "❄️Diversifique proveedores y anticípese a 2025. Aproveche esta oferta por tiempo limitado para asegurarse de que su laboratorio esté listo para cualquier eventualidad y reciba medios Gems y pajuelas de vitrificación Cryolock para validación*.❄️",
-        cta: "📧 ¡Contáctenos hoy!",
+          "❄️Diversifica tus proveedores y mantente a la vanguardia en 2025. Oferta por tiempo limitado - Medios Gems y pajillas Cryolock para vitrificación para validación*. ❄️",
+        cta: "📧 ¡Contáctanos para saber más!",
       },
     },
 
@@ -406,8 +406,8 @@ const texts = {
       closing: {
         title: "Como mitigar riscos?",
         message:
-          "❄️Diversifique fornecedores e antecipe-se a 2025. Aproveite esta oferta por tempo limitado para garantir que seu laboratório esteja preparado para tudo e receba meios Gems e canudos de vitrificação CryoLock para validação*.❄️",
-        cta: "📧 Entre em contato conosco hoje!",
+          "❄️Diversifique seus fornecedores e esteja à frente em 2025. Oferta por tempo limitado - Meios Gems e palhetas Cryolock para vitrificação para validação*.❄️",
+        cta: "📧 Entre em contato para saber mais!",
       },
     },
     nameLabel: "Nome Completo:",
