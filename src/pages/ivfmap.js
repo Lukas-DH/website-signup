@@ -83,7 +83,7 @@ const MapboxWithSearch = () => {
             border: "1px solid #ccc",
           }}
         />
-        {searchQuery && (
+        {searchQuery.length >= 3 && (
           <ul
             style={{
               marginTop: "8px",
@@ -92,7 +92,7 @@ const MapboxWithSearch = () => {
               borderRadius: "4px",
               listStyle: "none",
               padding: "8px",
-              maxHeight: "150px",
+              maxHeight: "110px",
               overflowY: "auto",
               width: "300px",
             }}
