@@ -7,6 +7,7 @@ import Spain from "./pages/spainnc";
 import France from "./pages/france";
 import Portugal from "./pages/portugalnc";
 import Existingcustomers from "./pages/existingcustomers";
+import ExistingcustomersSpecial from "./pages/existingcustomers_special";
 import ExistingcustomersFrance from "./pages/existingcustomersFrance";
 import MapboxWithSearch from "./pages/ivfmap";
 
@@ -26,6 +27,7 @@ function App() {
       <Route path="/italync-88" element={<Italy />} />
       <Route path="/italy" element={<Italy />} />
       <Route path="/onboarding" element={<Existingcustomers />} />
+      <Route path="/cryokit" element={<ExistingcustomersSpecial />} />
       <Route
         path="/existingcustomersfrance"
         element={<ExistingcustomersFrance />}

@@ -26,7 +26,7 @@ function Popupspecial() {
       {/* Image */}{" "}
       <a
         className="product-item-popup"
-        href="https://example.com"
+        href="/cryokit"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -38,11 +38,14 @@ function Popupspecial() {
           />
         </div>
       </a>
-      <strong>
-        {currentText.specialMessage.closing.cta}
-        <br></br>
-      </strong>
-      CaringIVF{" "}
+      <strong>{currentText.specialMessage.closing.cta}</strong>{" "}
+      <a
+        href="https://meetings-eu1.hubspot.com/lstojanov?uuid=cac0bfbe-8135-4bb8-834b-9346d133bca9"
+        target="_blank"
+      >
+        or book a meeting here
+      </a>
+      <br></br>CaringIVF{" "}
     </div>
   );
 }

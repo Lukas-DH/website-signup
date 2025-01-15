@@ -44,7 +44,7 @@ const MapboxWithSearch = () => {
     // Trigger LeadForm popup after 15 seconds
     const timer = setTimeout(() => {
       setShowLeadForm(true);
-    }, 1000); // Optimal delay time (15 seconds)
+    }, 15000); // Optimal delay time (15 seconds)
 
     // Cleanup timer on unmount
     return () => clearTimeout(timer);
@@ -83,6 +83,43 @@ const MapboxWithSearch = () => {
             border: "1px solid #ccc",
           }}
         />
+        {searchQuery && (
+          <ul
+            style={{
+              marginTop: "8px",
+              background: "white",
+              border: "1px solid #ccc",
+              borderRadius: "4px",
+              listStyle: "none",
+              padding: "8px",
+              maxHeight: "150px",
+              overflowY: "auto",
+              width: "300px",
+            }}
+          >
+            {filteredMarkers.map((marker, index) => (
+              <li
+                key={index}
+                onClick={() => {
+                  setSelectedMarker(marker);
+                  setSearchQuery(marker.ClinicName || marker.City || "");
+                }}
+                style={{
+                  padding: "8px",
+                  cursor: "pointer",
+                  borderBottom: "1px solid #eee",
+                }}
+              >
+                {marker.ClinicName || marker.City || "Unnamed Clinic"}
+              </li>
+            ))}
+            {filteredMarkers.length === 0 && (
+              <li style={{ padding: "8px", color: "#888" }}>
+                No results found
+              </li>
+            )}
+          </ul>
+        )}
       </div>
 
       {/* Map Component */}

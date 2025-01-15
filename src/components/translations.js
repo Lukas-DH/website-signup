@@ -78,6 +78,10 @@ const texts = {
     witnessingHover: "Gidget",
     TimelapseHover: "Geri",
     mediaHover: "Gems",
+    leica: "Leica",
+    leicaHover: "Microscopie",
+    titleExistingSpecial: "Sign up for the Caring IVF-Genea Cryokit",
+    meeting: "or book a meeting by clinicing here",
   },
   it: {
     titleExisting: "Modulo di onboarding per clienti",
@@ -164,6 +168,8 @@ const texts = {
     mediaHover: "Gems",
     leica: "Leica",
     leicaHover: "Microscopie",
+    titleExistingSpecial: "Iscriviti al Caring IVF-Genea Cryokit",
+    meeting: "O prenota un incontro cliccando qui",
   },
 
   fr: {
@@ -252,6 +258,8 @@ const texts = {
     mediaHover: "Gems",
     leica: "Leica",
     leicaHover: "Microscopie",
+    titleExistingSpecial: "Inscrivez-vous au Caring IVF-Genea Cryokit",
+    meeting: "Ou réservez une réunion en cliquant ici",
   },
 
   es: {
@@ -341,6 +349,8 @@ const texts = {
     mediaHover: "Gems",
     leica: "Leica",
     leicaHover: "Microscopie",
+    titleExistingSpecial: "Regístrate en el Caring IVF-Genea Cryokit",
+    meeting: "O reserva una reunión haciendo clic aquí",
   },
 
   pt: {
@@ -428,6 +438,8 @@ const texts = {
     mediaHover: "Gems",
     leica: "Leica",
     leicaHover: "Microscopie",
+    titleExistingSpecial: "Inscreva-se no Caring IVF-Genea Cryokit",
+    meeting: "Ou agende uma reunião clicando aqui",
   },
 };
 export default texts;
