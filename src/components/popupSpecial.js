@@ -32,7 +32,7 @@ function Popupspecial() {
       >
         <div className="image-container">
           <img
-            src="./gemscryo.png"
+            src="./gemscryo.jpeg"
             alt="Descriptive Alt Text"
             className="special-message-image"
           />
