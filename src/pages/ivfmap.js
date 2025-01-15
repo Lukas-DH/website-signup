@@ -62,7 +62,6 @@ const MapboxWithSearch = () => {
     );
     setFilteredMarkers(results);
   }, [searchQuery, markers]);
-  console.log(filteredMarkers);
 
   return (
     <div style={{ position: "relative" }}>
