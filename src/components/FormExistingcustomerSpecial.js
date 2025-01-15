@@ -19,7 +19,6 @@ function Existingcustomers() {
     billingAddress: "",
     vatTaxId: "",
     invoicesSentTo: "",
-    invoicesSentTo: "",
     productInterest: [],
   });
 
@@ -27,49 +26,6 @@ function Existingcustomers() {
   const [language, setLanguage] = useState("en"); // State for managing language
 
   // Toggle between English and Italian
-  const toggleLanguage = () => {
-    setLanguage((prevLanguage) => (prevLanguage === "it" ? "en" : "it"));
-  };
-
-  const toggleProductInterest = (prodotto) => {
-    setFormData((prevState) => {
-      if (prodotto === "All Products") {
-        const tuttiSelezionati = prevState.productInterest.length === 6;
-        if (tuttiSelezionati) {
-          return {
-            ...prevState,
-            productInterest: [],
-          };
-        } else {
-          return {
-            ...prevState,
-            productInterest: [
-              "All Products",
-              "Digital Cameras",
-              "identitovigilanza",
-              "Caring Genea Cryokit",
-              "S-Cryolock",
-              "Cryolock",
-            ],
-          };
-        }
-      }
-      const èSelezionato = prevState.productInterest.includes(prodotto);
-      if (èSelezionato) {
-        return {
-          ...prevState,
-          productInterest: prevState.productInterest.filter(
-            (item) => item !== prodotto
-          ),
-        };
-      } else {
-        return {
-          ...prevState,
-          productInterest: [...prevState.productInterest, prodotto],
-        };
-      }
-    });
-  };
 
   const inviaEmail = (e) => {
     e.preventDefault();

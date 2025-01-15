@@ -310,16 +310,21 @@ const MapboxWithSearch = () => {
 
       <style>
         {`
-  @media (max-width: 768px) {
-    .advert-banner {
-      bottom: 10px; /* Adjust spacing */
-      right: 10px;
-      transform: translateX(0%); /* Center horizontally */
-      width: 90%; /* Full width with padding */
-      max-width: none;
-      font-size: 12px; /* Adjust font size */
-    }
+@media (max-width: 768px) {
+  input[type="text"] {
+    width: 90%; /* Adjust width for mobile */
+    font-size: 12px; /* Smaller font */
   }
+
+  .advert-banner {
+    bottom: 10px;
+    right: 10px;
+    width: 90%;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
   `}
       </style>
     </div>
