@@ -285,7 +285,7 @@ const MapboxWithSearch = () => {
         }}
         onClick={() =>
           window.open(
-            "https://sea-turtle-app-qfyrw.ondigitalocean.app/onboarding",
+            "https://sea-turtle-app-qfyrw.ondigitalocean.app/cryokit",
             "_blank"
           )
         }
