@@ -270,7 +270,7 @@ const MapboxWithSearch = () => {
       <div
         style={{
           position: "absolute",
-          bottom: "20px",
+          bottom: "5vh",
           right: "10px",
           zIndex: 10,
           backgroundColor: "#ffeb3b",
@@ -317,11 +317,13 @@ const MapboxWithSearch = () => {
   }
 
   .advert-banner {
-    bottom: 10px;
+    position: fixed;
+    bottom: 5vh;
     right: 10px;
     width: 90%;
     font-size: 12px;
     text-align: center;
+    z-index: 1000; /* Ensure it's above other elements */
   }
 }
 
