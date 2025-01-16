@@ -128,7 +128,7 @@ const MapboxWithSearch = () => {
           longitude: 7.4964,
           zoom: 4,
         }}
-        style={{ width: "100%", height: "100vh" }}
+        style={{ width: "100%", height: "100dvh" }}
         mapStyle="mapbox://styles/mapbox/streets-v11"
         mapboxAccessToken={MAPBOX_TOKEN}
         collectResourceTiming={false} // Disable telemetry
@@ -270,7 +270,7 @@ const MapboxWithSearch = () => {
       <div
         style={{
           position: "absolute",
-          // bottom: "10vh",
+          bottom: "5vh",
           right: "10px",
           zIndex: 10,
           backgroundColor: "#ffeb3b",
