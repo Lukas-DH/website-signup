@@ -28,6 +28,7 @@ function App() {
       <Route path="/italy" element={<Italy />} />
       <Route path="/onboarding" element={<Existingcustomers />} />
       <Route path="/cryokit" element={<ExistingcustomersSpecial />} />
+      <Route path="/signup" element={<ExistingcustomersSpecial />} />
       <Route
         path="/existingcustomersfrance"
         element={<ExistingcustomersFrance />}
