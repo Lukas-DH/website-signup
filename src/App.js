@@ -10,6 +10,7 @@ import Existingcustomers from "./pages/existingcustomers";
 import ExistingcustomersSpecial from "./pages/existingcustomers_special";
 import ExistingcustomersFrance from "./pages/existingcustomersFrance";
 import MapboxWithSearch from "./pages/ivfmap";
+import Privacy from "./pages/privacy";
 
 function RedirectToCaring() {
   useEffect(() => {
@@ -39,6 +40,7 @@ function App() {
       <Route path="/portugalnc-43" element={<Portugal />} />
       <Route path="/portugal" element={<Portugal />} />
       <Route path="/ivfmapeu" element={<MapboxWithSearch />} />
+      <Route path="/privacy" element={<Privacy />} />
     </Routes>
   );
 }
