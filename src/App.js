@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Italy from "./pages/italync";
 import Spain from "./pages/spainnc";
 import France from "./pages/france";
+import Eshre from "./pages/eshre";
 import Portugal from "./pages/portugalnc";
 import Existingcustomers from "./pages/existingcustomers";
 import ExistingcustomersSpecial from "./pages/existingcustomers_special";
@@ -37,6 +38,7 @@ function App() {
       <Route path="/spainnc-33" element={<Spain />} />
       <Route path="/spain" element={<Spain />} />
       <Route path="/france" element={<France />} />
+      <Route path="/eshre" element={<Eshre />} />
       <Route path="/portugalnc-43" element={<Portugal />} />
       <Route path="/portugal" element={<Portugal />} />
       {/* <Route path="/ivfmapeu" element={<MapboxWithSearch />} /> */}

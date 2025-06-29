@@ -66,7 +66,10 @@ const texts = {
     digitalCamerasHover:
       "Wifi cameras C-mount and invertion microscope compatible",
     cryokit: "Caring Genea Cryokit",
+    carebot: "CareBot",
     cryokitHover: "Optimise pricing with a Gems+Cryolock bundle",
+    carebotHover:
+      "A versatile, plug-and-play lab robot designed for effortless installation and seamless integration into any workflow.",
     scryolock: "S-Cryolock",
     scryolockHover: "Slimmer size",
     cryolock: "Cryolock",
@@ -154,7 +157,10 @@ const texts = {
     digitalCamerasHover:
       "Fotocamere Wifi compatibili con montatura C e microscopi a inversione",
     cryokit: "Caring Genea Cryokit",
+    carebot: "CareBot",
     cryokitHover: "Ottimizza i prezzi con un bundle Gems+Cryolock",
+    carebotHover:
+      "A versatile, plug-and-play lab robot designed for effortless installation and seamless integration into any workflow.",
     scryolock: "S-Cryolock",
     scryolockHover: "Dimensioni più ridotte",
     cryolock: "Cryolock",
@@ -244,7 +250,10 @@ const texts = {
     digitalCamerasHover:
       "Appareils photo Wifi compatibles avec monture C et microscope inversé",
     cryokit: "Caring Genea Cryokit",
+    carebot: "CareBot",
     cryokitHover: "Optimisez les prix avec un bundle Gems+Cryolock",
+    carebotHover:
+      "Un robot de laboratoire polyvalent, prêt à l’emploi, conçu pour une installation facile et une intégration fluide dans tous les flux de travail.",
     scryolock: "S-Cryolock",
     scryolockHover: "Taille plus fine",
     cryolock: "Cryolock",
@@ -335,7 +344,10 @@ const texts = {
     digitalCamerasHover:
       "Cámaras Wifi compatibles con montura C y microscopios de inversión",
     cryokit: "Caring Genea Cryokit",
+    carebot: "CareBot",
     cryokitHover: "Optimiza precios con un paquete Gems+Cryolock",
+    carebotHover:
+      "A versatile, plug-and-play lab robot designed for effortless installation and seamless integration into any workflow.",
     scryolock: "S-Cryolock",
     scryolockHover: "Tamaño más pequeño",
     cryolock: "Cryolock",
@@ -424,7 +436,10 @@ const texts = {
     digitalCamerasHover:
       "Câmeras Wifi compatíveis com montagem C e microscópios de inversão",
     cryokit: "Caring Genea Cryokit",
+    carebot: "CareBot",
     cryokitHover: "Otimize os preços com um pacote Gems+Cryolock",
+    carebotHover:
+      "A versatile, plug-and-play lab robot designed for effortless installation and seamless integration into any workflow.",
     scryolock: "S-Cryolock",
     scryolockHover: "Tamanho menor",
     cryolock: "Cryolock",
