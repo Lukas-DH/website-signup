@@ -367,6 +367,7 @@ function ModuloContattiItalia() {
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
+            placeholder={language === "fr" ? "Nom complet..." : "full name..."}
           />
         </div>
         <div className="form-group">
@@ -382,6 +383,11 @@ function ModuloContattiItalia() {
               setFormData({ ...formData, company: e.target.value })
             }
             required
+            placeholder={
+              language === "fr"
+                ? "la société que vous représentez..."
+                : "the company you are representing..."
+            }
           />
         </div>
         <div className="form-group">
@@ -397,6 +403,11 @@ function ModuloContattiItalia() {
               setFormData({ ...formData, email: e.target.value })
             }
             required
+            placeholder={
+              language === "fr"
+                ? "Adresse e-mail de travail..."
+                : "work email..."
+            }
           />
         </div>
         <div className="form-group">
@@ -407,6 +418,11 @@ function ModuloContattiItalia() {
             value={formData.telephone}
             onChange={(e) =>
               setFormData({ ...formData, telephone: e.target.value })
+            }
+            placeholder={
+              language === "fr"
+                ? "numéro de téléphone préféré..."
+                : "prefered phone number..."
             }
           />
         </div>
