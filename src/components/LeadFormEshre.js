@@ -18,6 +18,7 @@ function ModuloContattiItalia() {
   const [language, setLanguage] = useState("fr"); // State for managing language
   const [filteredCountries, setFilteredCountries] = useState([]);
   const [showCountryDropdown, setShowCountryDropdown] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const countries = [
     "Afghanistan",
@@ -283,7 +284,7 @@ function ModuloContattiItalia() {
 
   const inviaEmail = (e) => {
     e.preventDefault();
-
+    setLoading(true);
     const emailData = {
       name: formData.name,
       company: formData.company,
@@ -311,31 +312,32 @@ function ModuloContattiItalia() {
         }, 3000);
       })
       .catch((err) => {
+        setLoading(false);
         console.error("Error submitting form:", err);
         alert("Error submitting form. Please try again.");
       });
 
-    // emailjs
-    //   .send(
-    //     process.env.REACT_APP_EMAILJS_SERVICE_ID,
-    //     process.env.REACT_APP_EMAILJS_TEMPLATE_ID_NEW,
-    //     emailData,
-    //     process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-    //   )
-    //   .then(
-    //     (response) => {
-    //       console.log("SUCCESSO!", response.status, response.text);
-    //       setFormInviato(true);
-    //       setTimeout(() => {
-    //         window.location.href =
-    //           "https://sea-turtle-app-qfyrw.ondigitalocean.app/france";
-    //       }, 3000);
-    //     },
-    //     (error) => {
-    //       console.error("FALLITO...", error);
-    //       alert("Errore nell'invio dei dati. Riprova.");
-    //     }
-    //   );
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID_NEW,
+        emailData,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESSO!", response.status, response.text);
+          setFormInviato(true);
+          setTimeout(() => {
+            window.location.href =
+              "https://sea-turtle-app-qfyrw.ondigitalocean.app/france";
+          }, 3000);
+        },
+        (error) => {
+          console.error("FALLITO...", error);
+          alert("Errore nell'invio dei dati. Riprova.");
+        }
+      );
   };
 
   const currentText = texts[language];
@@ -498,8 +500,12 @@ function ModuloContattiItalia() {
           toggleProductInterest={toggleProductInterest}
         />
 
-        <button type="submit" className="submit-button">
-          {currentText.inviaButton}
+        <button type="submit" className="submit-button" disabled={loading}>
+          {loading ? (
+            <span className="spinner"></span>
+          ) : (
+            currentText.inviaButton
+          )}
         </button>
         <p className="consent-text">{currentText.consentText}</p>
       </form>
