@@ -293,20 +293,27 @@ function ModuloContattiItalia() {
       productInterest: formData.productInterest.join(", "),
     };
 
-    // Send to Google Sheets
-    fetch(
-      "https://script.google.com/macros/s/AKfycbwmoL3nmKX7SmIAxtygBEn37Z5ehhrSWacf7mvM5uCqLKunDbtsSsQqeulWg7I3ACcMvQ/exec",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(emailData),
-      }
-    )
-      .then((res) => res.text())
-      .then((result) => console.log("Google Sheets response:", result))
-      .catch((err) => console.error("Error sending to Google Sheets:", err));
+    // Send to backend API
+    fetch("/api/submit-lead", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(emailData),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log("Submission successful:", result);
+        setFormInviato(true);
+        setTimeout(() => {
+          window.location.href =
+            "https://sea-turtle-app-qfyrw.ondigitalocean.app/eshre";
+        }, 3000);
+      })
+      .catch((err) => {
+        console.error("Error submitting form:", err);
+        alert("Error submitting form. Please try again.");
+      });
 
     // emailjs
     //   .send(
