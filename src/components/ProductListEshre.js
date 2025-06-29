@@ -110,7 +110,7 @@ const ProductList = ({ currentText, formData, toggleProductInterest }) => {
           }`}
           onClick={() => toggleProductInterest("CareBot")}
         >
-          <img src="/gems.jpeg" alt="Gems" className="product-logo" />
+          <img src="/UR3e_01_R.png" alt="Gems" className="product-logo" />
           <span>{currentText.carebot}</span>
           <div className="tooltip-text">{currentText.carebotHover}</div>
         </button>
