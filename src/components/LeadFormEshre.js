@@ -330,7 +330,7 @@ function ModuloContattiItalia() {
           setFormInviato(true);
           setTimeout(() => {
             window.location.href =
-              "https://sea-turtle-app-qfyrw.ondigitalocean.app/france";
+              "https://sea-turtle-app-qfyrw.ondigitalocean.app/eshre";
           }, 3000);
         },
         (error) => {
