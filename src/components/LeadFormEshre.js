@@ -15,7 +15,7 @@ function ModuloContattiItalia() {
   });
 
   const [formInviato, setFormInviato] = useState(false);
-  const [language, setLanguage] = useState("fr"); // State for managing language
+  const [language, setLanguage] = useState("en"); // State for managing language
   const [filteredCountries, setFilteredCountries] = useState([]);
   const [showCountryDropdown, setShowCountryDropdown] = useState(false);
   const [loading, setLoading] = useState(false);
