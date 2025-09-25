@@ -40,7 +40,7 @@ function ModuloContattiItalia() {
               "Digital Cameras",
               "identitovigilanza",
               "Caring Genea Cryokit",
-              "S-Cryolock",
+              "Lenshooke",
               "Cryolock",
               "Culture Media",
               "Leica",

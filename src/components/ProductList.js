@@ -36,15 +36,11 @@ const ProductList = ({ currentText, formData, toggleProductInterest }) => {
         <button
           type="button"
           className={`product-item ${
-            formData.productInterest.includes("S-Cryolock") ? "selected" : ""
+            formData.productInterest.includes("Lenshooke") ? "selected" : ""
           }`}
-          onClick={() => toggleProductInterest("S-Cryolock")}
+          onClick={() => toggleProductInterest("Lenshooke")}
         >
-          <img
-            src="/s-cryolock.jpg"
-            alt="s-cryolock"
-            className="product-logo"
-          />
+          <img src="/Lenshooke.jpg" alt="Lenshooke" className="product-logo" />
           <span>{currentText.scryolock}</span>
           <div className="tooltip-text">{currentText.scryolockHover}</div>
         </button>

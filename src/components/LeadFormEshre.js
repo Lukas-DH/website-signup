@@ -257,7 +257,7 @@ function ModuloContattiItalia() {
               "Digital Cameras",
               "identitovigilanza",
               "CareBot",
-              "S-Cryolock",
+              "Lenshooke",
               "Cryolock",
               "Culture Media",
               "Leica",

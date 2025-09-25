@@ -70,8 +70,8 @@ const texts = {
     cryokitHover: "Optimise pricing with a Gems+Cryolock bundle",
     carebotHover:
       "A versatile, plug-and-play lab robot designed for effortless installation and seamless integration into any workflow.",
-    scryolock: "S-Cryolock",
-    scryolockHover: "Slimmer size",
+    scryolock: "Lenshooke",
+    scryolockHover: "Semen Quality Analyzer",
     cryolock: "Cryolock",
     cryolockHover: "Regular size",
     switchLanguage: "Switch to english",
@@ -161,7 +161,7 @@ const texts = {
     cryokitHover: "Ottimizza i prezzi con un bundle Gems+Cryolock",
     carebotHover:
       "A versatile, plug-and-play lab robot designed for effortless installation and seamless integration into any workflow.",
-    scryolock: "S-Cryolock",
+    scryolock: "Lenshooke",
     scryolockHover: "Dimensioni più ridotte",
     cryolock: "Cryolock",
     cryolockHover: "Dimensioni standard",
@@ -254,7 +254,7 @@ const texts = {
     cryokitHover: "Optimisez les prix avec un bundle Gems+Cryolock",
     carebotHover:
       "Un robot de laboratoire polyvalent, prêt à l’emploi, conçu pour une installation facile et une intégration fluide dans tous les flux de travail.",
-    scryolock: "S-Cryolock",
+    scryolock: "Lenshooke",
     scryolockHover: "Taille plus fine",
     cryolock: "Cryolock",
     cryolockHover: "Taille standard",
@@ -348,7 +348,7 @@ const texts = {
     cryokitHover: "Optimiza precios con un paquete Gems+Cryolock",
     carebotHover:
       "A versatile, plug-and-play lab robot designed for effortless installation and seamless integration into any workflow.",
-    scryolock: "S-Cryolock",
+    scryolock: "Lenshooke",
     scryolockHover: "Tamaño más pequeño",
     cryolock: "Cryolock",
     cryolockHover: "Tamaño estándar",
@@ -440,7 +440,7 @@ const texts = {
     cryokitHover: "Otimize os preços com um pacote Gems+Cryolock",
     carebotHover:
       "A versatile, plug-and-play lab robot designed for effortless installation and seamless integration into any workflow.",
-    scryolock: "S-Cryolock",
+    scryolock: "Lenshooke",
     scryolockHover: "Tamanho menor",
     cryolock: "Cryolock",
     cryolockHover: "Tamanho padrão",
