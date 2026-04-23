@@ -297,6 +297,76 @@ export default function Privacy() {
           </a>
         </p>
       </section>
+
+      <hr className="my-10 border-gray-300" />
+
+      <h1 className="text-3xl font-bold text-center mb-6">
+        Conditions d'Utilisation
+      </h1>
+      <p className="text-sm text-gray-600 text-center mb-6">
+        Dernière mise à jour : 23 avril 2026
+      </p>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-semibold mb-2">
+          1. À propos de cette application
+        </h2>
+        <p className="mb-3">Cette application est destinée :</p>
+        <ul className="list-disc ml-5 space-y-2">
+          <li>
+            à vous donner des conseils personnalisés pour améliorer votre
+            fertilité spontanée et à suivre vos progrès dans la mise en
+            application de certains conseils de prévention ;
+          </li>
+          <li>
+            à détecter des situations à très fort risque d'infertilité
+            nécessitant une consultation médicale spécialisée.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-semibold mb-2">
+          2. Limites et Avertissements
+        </h2>
+        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
+          <p className="mb-2">
+            <strong>Attention :</strong> l'absence de risque majeur identifié
+            par l'application ne garantit pas l'obtention rapide d'une
+            grossesse.
+          </p>
+          <p>
+            De plus, cette application n'a pas été conçue pour estimer vos
+            chances de grossesse et <strong>ne remplace pas une
+            consultation médicale</strong> lorsque celle-ci peut s'avérer
+            nécessaire.
+          </p>
+        </div>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-semibold mb-2">
+          3. Responsabilité
+        </h2>
+        <p>
+          Les informations et conseils fournis par cette application sont
+          donnés à titre indicatif. Ils ne constituent pas un avis médical et
+          ne sauraient remplacer l'expertise d'un professionnel de santé
+          qualifié. En cas de doute ou de symptômes persistants, consultez un
+          médecin.
+        </p>
+      </section>
+
+      <section className="mb-6">
+        <h2 className="text-xl font-semibold mb-2">
+          4. Modification des Conditions
+        </h2>
+        <p>
+          Nous nous réservons le droit de modifier les présentes conditions à
+          tout moment. Toute modification sera publiée sur cette page avec une
+          date de mise à jour.
+        </p>
+      </section>
     </div>
   );
 }
